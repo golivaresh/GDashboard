@@ -18,8 +18,6 @@ $( document ).ready( ($) => {
     sidebarFooter = $( '#sidebarFooter' );
     sidebarAccordionOpc = $( '#sidebarAccordion>.accordion-item>[class^="accordion-collapse"]>ul>li' );
 
-    resizeSiderbarElements();
-
     /* *************************************************************************************************** */
     // Events
     btnMenuToggle.click( (e) => { 
@@ -50,33 +48,21 @@ $( document ).ready( ($) => {
 });
 /* *************************************************************************************************** */
 // Resize
-$( window ).resize(() => {
-    resizeSiderbarElements();
-});
 const resizeSiderbarElements = () => {
     setTimeout(() => {
         resizeRootVariable( '--m-sidebar-footer-h-px', `${ sidebarOpcHeight() }px` );
     }, 200);
 }
-
-const resizeRootVariable = ( varName, value ) => {
-    $(':root').css( varName, value );
-};
-const sidebarOpcHeight = () => {
-    return sidebarContainer.outerHeight() - (sidebarFooter.outerHeight() + 5);
-};
 /* *************************************************************************************************** */
 // Screen Size functions
 const isSmallScreen = () => {
     return ( $(window).width() < 768 );
 }
 /* *************************************************************************************************** */
-
 /* *************************************************************************************************** */
 // Menu functions
 const toggleMenu = () => {
     toggleClasses();
-    //resizeSiderbarElements();
 }
 
 const toggleClasses = () => {
@@ -97,7 +83,6 @@ const toggleClasses = () => {
 };
 
 const expandedIfActive = () => {
-    // const activeOpc = $('[id^="flush-collapse"]>ul>li.active');
     const activeOpc = $('.accordion-collapse>ul>li.active');
     if ( activeOpc && activeOpc.length > 0 ) {
         const parentOpc = activeOpc[0].parentElement; 
