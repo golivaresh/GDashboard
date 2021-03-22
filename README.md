@@ -1,0 +1,2 @@
+# GDashboard
+Simple dashboard template.
