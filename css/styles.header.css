@@ -1,0 +1,69 @@
+/* ************************************************** */
+/* Root */
+:root {
+
+}
+/* ************************************************** */
+/* ************************************************** */
+/* Bootstrap Sizes:
+.col 		Extra Pequeño (Extra Small) - Smartphones Vertical		Menos de 544px
+.col-sm 	Pequeño (Small) - Smartphones Vertical	 				Mas de 544px y Menos de 768px
+.col-md 	Mediano (Medium) - Tablets 								Mas de 768px y Menos de 992px
+.col-lg 	Largo (Large) - Computadoras							Mas de 992px y Menos de 1200px
+.col-xl 	Extra Largo (Extra Large) - Computadoras				Mas de 1200px */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    header.header {
+        padding: 0.5rem 0.1rem;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    header.header {
+        padding: 1rem 0.5rem;
+    }
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}
+/* ************************************************** */
+/* ************************************************** */
+/* Header */
+header.header {}
+.btn-menu.btn-menu-collapsed {
+    -ms-transform: rotate(90deg); /* IE 9 */
+    transform: rotate(90deg);
+}
+/* ************************************************** */
+/* ************************************************** */
+/* Bootstrap Overides */
+.btn-link {
+    font-weight: 400;
+    color: var(--bg-header-link-red);
+    text-decoration: none;
+}
+.btn-link:hover {
+    font-weight: 400;
+    color: var(--bg-header-link-hover-red);
+    text-decoration: none;
+}
+.dropdown-item.active, .dropdown-item:active {
+    color: #fff;
+    text-decoration: none;
+    background-color: var(--bg-header-opc-active-red);
+}
+.dropdown-item:focus, .dropdown-item:hover {
+    color: #ffffff;
+    background-color: var(--bg-header-opc-hover-red);
+}
+/* ************************************************** */
