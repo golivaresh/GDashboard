@@ -18,10 +18,10 @@
 <body class="test-media">
 
 
-    <div class="container-fluid">
+    <div id="containerFluid" class="container-fluid">
         <!-- ***************************** -->
         <!-- ********** Sidebar ********** -->
-        <nav id="sidebar" class="sidebar tr-1 m-collapsed cursor">
+        <nav id="sidebar" class="sidebar tr-5 m-collapsed cursor">
             <div id="sidebarBg" class="sidebar-bg size-100"></div>
             <div id="sidebarContainer" class="sidebar-container size-100">
                 <div id="sidebarOpc" class="m-opc m-opc-collapsed pt-1">
@@ -31,18 +31,19 @@
                     <div id="sidebarAccordion" class="accordion accordion-flush">
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="flush-headingProfile">
-                              <div class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseProfile" aria-expanded="false" aria-controls="flush-collapseProfile">
+                              <div class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flushCollapse_Profile" aria-expanded="false" aria-controls="flushCollapse_Profile">
                                 <i class="m-opc-icon">
-                                    <img class="sidebar-logo" src="./img/logo-1.png" alt="">
+                                    <img class="sidebar-logo bg-gradient" src="./img/logo-1.png" alt="">
                                 </i>
                                 @ golivaresh
                               </div>
                             </h2>
-                            <div id="flush-collapseProfile" class="accordion-collapse collapse tr-2" aria-labelledby="flush-headingProfile" data-bs-parent="#sidebarAccordion">
+                            <div id="flushCollapse_Profile" class="accordion-collapse collapse tr-2" aria-labelledby="flush-headingProfile" data-bs-parent="#sidebarAccordion">
                                 <ul>
-                                    <li class="">Inicio</li>
-                                    <li class="">Perfil</li>
-                                    <li class="">Info</li>
+                                    <li class="active"><i class="fas fa-home"></i> Home</li>
+                                    <li class=""><i class="fas fa-user-circle"></i> My profile</li>
+                                    <li class=""><i class="far fa-address-card"></i> About Me</li>
+                                    <li class=""><i class="fas fa-cogs"></i> About this site</li>
                                 </ul>
                             </div>
                             <div class="w-100 p-2 d-block text-center">
@@ -51,46 +52,44 @@
                           </div>
                         <div class="accordion-item">
                           <h2 class="accordion-header" id="flush-heading1">
-                            <div class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse1" aria-expanded="false" aria-controls="flush-collapse1">
-                              <i class="m-opc-icon">A</i>
-                              Opción 1
+                            <div class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flushCollapse_1" aria-expanded="false" aria-controls="flushCollapse_1">
+                              <i class="m-opc-icon fas fa-chart-line"></i>
+                              Dashboard
                             </div>
                           </h2>
-                          <div id="flush-collapse1" class="accordion-collapse collapse tr-2" aria-labelledby="flush-heading1" data-bs-parent="#sidebarAccordion">
+                          <div id="flushCollapse_1" class="accordion-collapse collapse" aria-labelledby="flush-heading1" data-bs-parent="#sidebarAccordion">
                               <ul>
-                                  <li class="">Inicio</li>
-                                  <li class="">Perfil</li>
-                                  <li class="">Info</li>
+                                  <li class="">Graphics</li>
                               </ul>
                           </div>
                         </div>
                         <div class="accordion-item">
                           <h2 class="accordion-header" id="flush-heading2">
-                            <div class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse2" aria-expanded="false" aria-controls="flush-collapse2">
-                              <i class="m-opc-icon">B</i>
-                              Opción 2
+                            <div class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flushCollapse_2" aria-expanded="false" aria-controls="flushCollapse_2">
+                              <i class="m-opc-icon fab fa-wpforms"></i>
+                              Forms
                             </div>
                           </h2>
-                          <div id="flush-collapse2" class="accordion-collapse collapse tr-2" aria-labelledby="flush-heading2" data-bs-parent="#sidebarAccordion">
+                          <div id="flushCollapse_2" class="accordion-collapse collapse" aria-labelledby="flush-heading2" data-bs-parent="#sidebarAccordion">
                               <ul>
-                                  <li class="">Inicio</li>
-                                  <li class="active">Perfil</li>
-                                  <li class="">Info</li>
+                                  <li class="">Simple Forms</li>
+                                  <li class="">Validation Forms</li>
+                                  <li class="">Datepicker</li>
+                                  <li class="">Buttons</li>
                               </ul>
                           </div>
                         </div>
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="flush-heading3">
-                              <div class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse3" aria-expanded="false" aria-controls="flush-collapse3">
-                                <i class="m-opc-icon">B</i>
-                                Opción 3
+                              <div class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flushCollapse_3" aria-expanded="false" aria-controls="flushCollapse_3">
+                                <i class="m-opc-icon fas fa-border-all"></i>
+                                Tables
                               </div>
                             </h2>
-                            <div id="flush-collapse3" class="accordion-collapse collapse tr-2" aria-labelledby="flush-heading3" data-bs-parent="#sidebarAccordion">
+                            <div id="flushCollapse_3" class="accordion-collapse collapse" aria-labelledby="flush-heading3" data-bs-parent="#sidebarAccordion">
                                 <ul>
-                                    <li class="">Inicio</li>
-                                    <li class="">Perfil</li>
-                                    <li class="">Info</li>
+                                    <li class="">Simple tables</li>
+                                    <li class="">Grid</li>
                                 </ul>
                             </div>
                           </div>
@@ -126,21 +125,21 @@
                 </div>
                 <div class="col-12 col-md-11">
                     <div class="text-end">
-                        <div class="btn-group dropstart">
+                        <div class="btn-group dropstart dropdown">
                             <a class="btn btn-link" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="fas fa-cog"></i>
                             </a>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                            <ul class="dropdown-menu tr-2" aria-labelledby="dropdownMenu2">
                                 <li><button class="dropdown-item active" type="button">Action</button></li>
                                 <li><button class="dropdown-item" type="button">Another action</button></li>
                                 <li><button class="dropdown-item" type="button">Something else here</button></li>
                             </ul>
                         </div>
-                        <div class="btn-group dropstart">
+                        <div class="btn-group dropstart dropdown">
                             <a class="btn btn-link" type="button" id="dropdownMenu3" data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="fas fa-user"></i>
                             </a>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                            <ul class="dropdown-menu tr-2" aria-labelledby="dropdownMenu2">
                                 <li><button class="dropdown-item" type="button">Action</button></li>
                                 <li><button class="dropdown-item" type="button">Another action</button></li>
                                 <li><button class="dropdown-item" type="button">Something else here</button></li>
@@ -149,8 +148,90 @@
                     </div>
                 </div>
             </header>
-            <main class="main bg-secondary">
-                adsfa
+            <main class="main">
+                <div class="container-fluid">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
+                </div>
             </main>
             <div id="btnMenuToggleMain" class="btnMenuToggle btn-menu-main btn-menu-collapsed cursor tr-2 d-md-none h2" >
                 <i class="fas fa-bars"></i>

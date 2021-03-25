@@ -6,6 +6,7 @@ let sidebarContainer;
 let sidebarFooter;
 let sidebarOpc;
 let sidebarAccordionOpc;
+let sidebarAccordionFlush;
 /* *************************************************************************************************** */
 /* *************************************************************************************************** */
 // Ready
@@ -16,8 +17,11 @@ $( document ).ready( ($) => {
     sidebarContainer = $( '#sidebarContainer' );
     sidebarOpc = $( '#sidebarOpc' );
     sidebarFooter = $( '#sidebarFooter' );
-    sidebarAccordionOpc = $( '#sidebarAccordion>.accordion-item>[class^="accordion-collapse"]>ul>li' );
-
+    sidebarAccordionOpc = $( '#sidebarAccordion>div.accordion-item>[class^="accordion-collapse"]>ul>li' );
+    sidebarAccordionFlush = $('#sidebarAccordion>div.accordion-item>div[id^="flushCollapse"].collapse');
+    if ( !isSmallScreen() ) {
+        toggleMenu();
+    }
     /* *************************************************************************************************** */
     // Events
     btnMenuToggle.click( (e) => { 
@@ -35,24 +39,22 @@ $( document ).ready( ($) => {
     });
     sidebar.hover(
         () => {
-            if ( !sidebar.hasClass('m-expanded') ) {
-                expandedIfActive();
-            }
+            // if ( !sidebar.hasClass('m-expanded') ) {
+            //     expandedIfActive();
+            //     console.log('expandedIfActive');
+            // }
+            console.log('hover on');
         }, () => {
             if ( !sidebar.hasClass('m-expanded') ) {
                 hideAccordion();
+                console.log('hideAccordion');
             }
+            console.log('hover off');
         }
     );
     /* *************************************************************************************************** */
 });
 /* *************************************************************************************************** */
-// Resize
-const resizeSiderbarElements = () => {
-    setTimeout(() => {
-        resizeRootVariable( '--m-sidebar-footer-h-px', `${ sidebarOpcHeight() }px` );
-    }, 200);
-}
 /* *************************************************************************************************** */
 // Screen Size functions
 const isSmallScreen = () => {
@@ -83,17 +85,14 @@ const toggleClasses = () => {
 };
 
 const expandedIfActive = () => {
-    const activeOpc = $('.accordion-collapse>ul>li.active');
+    const activeOpc = $('#sidebarAccordion>div.accordion-item>div.accordion-collapse>ul>li.active');
     if ( activeOpc && activeOpc.length > 0 ) {
-        const parentOpc = activeOpc[0].parentElement; 
-        if ( parentOpc && parentOpc.parentElement ) {
-            $( `#${parentOpc.parentElement.id}` ).collapse('show');
-        }
+        $( `#${activeOpc[0].parentElement.parentElement.id}` ).collapse('show');
     }
 }
 
 const hideAccordion = () => {
-    $('.collapse').collapse('hide');
+    sidebarAccordionFlush.collapse('hide');
 }
 
 /* *************************************************************************************************** */

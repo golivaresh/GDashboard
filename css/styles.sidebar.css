@@ -14,7 +14,6 @@
 .col-xl 	Extra Largo (Extra Large) - Computadoras				Mas de 1200px */
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-    .test-media {background: red;}
     .sidebar {
         /* right: 0; */
         width: 100%;
@@ -84,12 +83,10 @@
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    .test-media {background: orange;}
 } 
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-    .test-media {background: pink;}
 }
 /* ************************************************** */
 /* ************************************************** */
@@ -103,7 +100,7 @@
     overflow-x: hidden; /* Disable horizontal scroll */
     display: flex;
     color: whitesmoke;
-    z-index: 1;
+    z-index: 2;
 }
 #sidebar>#btnMenuSm>.menuToggle{
     /* width: 100%; */
@@ -144,9 +141,16 @@
     overflow-x: hidden;
     flex-grow: 1;
 }
-#sidebar>#sidebarContainer>#sidebarOpc.m-opc>ul {
-    list-style: none;
+#sidebarOpc.m-opc-expanded>#sidebarAccordion>div.accordion-item>div[id^="flushCollapse"] {
+    -webkit-transition: all 0.1s;
+    -moz-transition: all 0.1s;
+    -ms-transition: all 0.1s;
+    -o-transition: all 0.1s;
+    transition: all 0.1s;
 }
+/* #sidebar>#sidebarContainer>#sidebarOpc.m-opc-expanded>.accordion.accordion-flush {
+    
+} */
 i.m-opc-icon {
     text-align: center;
     width: 70px;
@@ -159,6 +163,7 @@ img#sidebar-logo{
 
 .accordion-collapse>ul {
     padding: 0px;
+    margin: 0px;
 }
 .accordion-collapse>ul>li {
     list-style: none;
