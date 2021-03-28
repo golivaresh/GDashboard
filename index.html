@@ -9,47 +9,68 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/hover-min.css">
-    <link rel="stylesheet" href="css/primary-colors.css">
+    <link rel="stylesheet" href="css/styles.themes.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/styles.sidebar.css">
+    <link rel="stylesheet" href="css/styles.main.css">
     <link rel="stylesheet" href="css/styles.header.css">
     <title>Mi Dashboard</title>
 </head>
-<body class="test-media">
-
+<body>
 
     <div id="containerFluid" class="container-fluid">
         <!-- ***************************** -->
         <!-- ********** Sidebar ********** -->
-        <nav id="sidebar" class="sidebar tr-5 m-collapsed cursor">
-            <div id="sidebarBg" class="sidebar-bg size-100"></div>
-            <div id="sidebarContainer" class="sidebar-container size-100">
+        <nav id="sidebar" class="tr-2 m-collapsed c-pointer">
+            <div id="sidebarBg" class="size-100"></div>
+            <div id="sidebarContainer" class="size-100">
+                <div id="sidebarProfile" class="">
+                    <div class="w-100 text-center mb-2">
+                        <img id="imgProfile" class="bg-gradient tr-1" src="./img/logo-1.png" alt="">
+                    </div>
+                    <div id="" class="user-profile">
+                        <!-- <img id="sidebarLogo" class="bg-gradient" src="./img/logo-1.png" alt=""> -->
+                        <div id="" class="profile-menu-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="profile-menu-name">
+                            Gustavo Olivares Hernandez
+                        </div>
+                    </div>
+                    <div id="" class="user-profile">
+                        <!-- <img id="sidebarLogo" class="bg-gradient" src="./img/logo-1.png" alt=""> -->
+                        <div id="" class="profile-menu-icon">
+                            <i class="fas fa-comment-alt"></i>
+                        </div>
+                        <div class="profile-social">
+                            <i class="fab fa-linkedin"></i>
+                            <i class="fab fa-whatsapp-square"></i>
+                            <i class="fas fa-envelope-square"></i>
+                            <i class="fab fa-github-square"></i>
+                            <i class="fab fa-gitlab"></i>
+                        </div>
+                    </div>
+                    <!-- <div id="profileItems" class="">
+                        <ul>
+                            <li class=""><i class="fas fa-home"></i> Home</li>
+                            <li class="active"><i class="fas fa-user-circle"></i> My profile</li>
+                            <li class=""><i class="far fa-address-card"></i> About Me</li>
+                            <li class=""><i class="fas fa-cogs"></i> About this site</li>
+                        </ul>
+                    </div> -->
+                </div>
                 <div id="sidebarOpc" class="m-opc m-opc-collapsed pt-1">
-
+                    <div id="profileItems" class="">
+                        <ul>
+                            <li class=""><i class="fas fa-home"></i>Home</li>
+                            <li class="active"><i class="fas fa-user-circle"></i>My profile</li>
+                            <li class=""><i class="far fa-address-card"></i>About Me</li>
+                            <li class=""><i class="fas fa-cogs"></i>About this site</li>
+                        </ul>
+                    </div>
                     <!-- ********** Accordion ********** -->
                     <!-- ***************************** -->
                     <div id="sidebarAccordion" class="accordion accordion-flush">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="flush-headingProfile">
-                              <div class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flushCollapse_Profile" aria-expanded="false" aria-controls="flushCollapse_Profile">
-                                <i class="m-opc-icon">
-                                    <img class="sidebar-logo bg-gradient" src="./img/logo-1.png" alt="">
-                                </i>
-                                @ golivaresh
-                              </div>
-                            </h2>
-                            <div id="flushCollapse_Profile" class="accordion-collapse collapse tr-2" aria-labelledby="flush-headingProfile" data-bs-parent="#sidebarAccordion">
-                                <ul>
-                                    <li class="active"><i class="fas fa-home"></i> Home</li>
-                                    <li class=""><i class="fas fa-user-circle"></i> My profile</li>
-                                    <li class=""><i class="far fa-address-card"></i> About Me</li>
-                                    <li class=""><i class="fas fa-cogs"></i> About this site</li>
-                                </ul>
-                            </div>
-                            <div class="w-100 p-2 d-block text-center">
-                                <hr class="w-100">
-                            </div>
-                          </div>
                         <div class="accordion-item">
                           <h2 class="accordion-header" id="flush-heading1">
                             <div class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flushCollapse_1" aria-expanded="false" aria-controls="flushCollapse_1">
@@ -64,7 +85,7 @@
                           </div>
                         </div>
                         <div class="accordion-item">
-                          <h2 class="accordion-header" id="flush-heading2">
+                          <h2 class="accordion-header active" id="flush-heading2">
                             <div class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flushCollapse_2" aria-expanded="false" aria-controls="flushCollapse_2">
                               <i class="m-opc-icon fab fa-wpforms"></i>
                               Forms
@@ -73,7 +94,7 @@
                           <div id="flushCollapse_2" class="accordion-collapse collapse" aria-labelledby="flush-heading2" data-bs-parent="#sidebarAccordion">
                               <ul>
                                   <li class="">Simple Forms</li>
-                                  <li class="">Validation Forms</li>
+                                  <li class="active">Validation Forms</li>
                                   <li class="">Datepicker</li>
                                   <li class="">Buttons</li>
                               </ul>
@@ -92,7 +113,7 @@
                                     <li class="">Grid</li>
                                 </ul>
                             </div>
-                          </div>
+                        </div>
                     </div>
                     <!-- ***************************** -->
 
@@ -100,14 +121,9 @@
                 <div id="sidebarFooter" class="sidebar-footer text-footer">
                     <div class="text-center">
                         <div class="copyright pull-right"> 
-                            © 2021 <a href="" class="text-primary">goh</a>
+                            ©2021 goh
                         </div>
                     </div>
-                    <!-- <div class=""> -->
-                        <!-- <div class="w-100 px-2 d-inline-block d-md-none text-end">
-                            <i id="btnMenuSm" class="menuToggle bg-secondary cursor fas fa-chevron-right"></i>
-                        </div> -->
-                    <!-- </div> -->
                 </div>
             </div>
         </nav>
@@ -118,7 +134,7 @@
             <header class="header row m-0"> 
                 <div class="col-1 d-none d-md-inline-block text-center">
                     <h3 class="m-0">
-                        <div class="btnMenuToggle btn-menu btn-menu-collapsed cursor tr-2" id="btnMenuToggleHeader">
+                        <div class="btnMenuToggle btn-menu btn-menu-collapsed c-pointer tr-2" id="btnMenuToggleHeader">
                             <i class="fas fa-bars hvr-wobble-horizontal"></i>
                         </div>
                     </h3>
@@ -132,7 +148,13 @@
                             <ul class="dropdown-menu tr-2" aria-labelledby="dropdownMenu2">
                                 <li><button class="dropdown-item active" type="button">Action</button></li>
                                 <li><button class="dropdown-item" type="button">Another action</button></li>
-                                <li><button class="dropdown-item" type="button">Something else here</button></li>
+                                <li class="pe-2 d-flex flex-wrap justify-content-around c-pointer">
+                                    <p class="w-100 text-center">
+                                        Select Theme
+                                    </p>
+                                    <div onclick="changeTheme('black')" class="icon-theme text-dark bg-dark"></div>
+                                    <div onclick="changeTheme('red')" class="icon-theme text-dark bg-danger"></div>
+                                </li>
                             </ul>
                         </div>
                         <div class="btn-group dropstart dropdown">
@@ -233,10 +255,10 @@
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
                 </div>
             </main>
-            <div id="btnMenuToggleMain" class="btnMenuToggle btn-menu-main btn-menu-collapsed cursor tr-2 d-md-none h2" >
+            <div id="btnMenuToggleMain" class="btnMenuToggle btn-menu-main btn-menu-collapsed c-pointer tr-2 d-md-none h2" >
                 <i class="fas fa-bars"></i>
             </div>
-            <div id="btnMenuClose" class="btnMenuToggle btn-menu-main-close btn-menu-collapsed cursor tr-2 d-md-none h2">
+            <div id="btnMenuClose" class="btnMenuToggle btn-menu-main-close btn-menu-collapsed c-pointer tr-2 d-md-none h2">
                 <!-- <i class="fas fa-chevron-right"></i> -->
                 <i class="fas fa-chevron-down"></i>
             </div>

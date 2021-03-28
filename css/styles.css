@@ -1,67 +1,20 @@
-/* You can add global styles to this file, and also import other style files */
+@charset "UTF-8";
+/*
+Page Root
+└── body
+    ├── div#containerFluid
+        ├── div#sidebar > styles.sidebar.scss
+        ├── custom
+        ├── demos
+        ├── fonts
+        ├── img
+        ├── variables
+        └── styles.less
 
-
-/* ************************************************** */
-/* Root */
-:root {
-}
-/* ************************************************** */
-
-/* ************************************************** */
-/* Transitions */
-body {
-    -webkit-transition: all 0.3s ;
-    -moz-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-}
-
-.tr-5 {
-    -webkit-transition: all 0.5s ;
-    -moz-transition: all 0.5s;
-    -ms-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    transition: all 0.5s;
-}
-.tr-2 {
-    -webkit-transition: all 0.2s;
-    -moz-transition: all 0.2s;
-    -ms-transition: all 0.2s;
-    -o-transition: all 0.2s;
-    transition: all 0.2s;
-}
-
-.tr-1 {
-    -webkit-transition: all 0.1s;
-    -moz-transition: all 0.1s;
-    -ms-transition: all 0.1s;
-    -o-transition: all 0.1s;
-    transition: all 0.1s;
-}
-
-.animated-fadeIn-5 {
-    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-    -moz-animation: fadein 2s; /* Firefox < 16 */
-    -ms-animation: fadein 2s; /* Internet Explorer */
-    -o-animation: fadein 2s; /* Opera < 12.1 */
-    animation: fadein 2s;
-}
-
-/* ************************************************** */
-/* ScrollBar */
-body::-webkit-scrollbar, div::-webkit-scrollbar {
-    width: 0.5em;
-}
-body::-webkit-scrollbar-track, div::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 6px rgba(255, 0, 0, 0.3);
-}
-
-body::-webkit-scrollbar-thumb, div::-webkit-scrollbar-thumb {
-    background-color: rgb(150, 0, 0);
-    outline: 1px solid slategrey;
-}
-/* ************************************************** */
+    └── components
+        ├── alerts       
+            └── alert.less
+*/
 /* ************************************************** */
 /* ************************************************** */
 /* Bootstrap Sizes:
@@ -71,147 +24,142 @@ body::-webkit-scrollbar-thumb, div::-webkit-scrollbar-thumb {
 .col-lg 	Largo (Large) - Computadoras							Mas de 992px y Menos de 1200px
 .col-xl 	Extra Largo (Extra Large) - Computadoras				Mas de 1200px */
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-    /* .test-media {background: red;} */
-}
-
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-    /* .test-media {background: green;} */
-}
-
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-    /* .test-media {background: rgba(226, 226, 226, 0.637);} */
-} 
-
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-    /* .test-media {background: orange;} */
-} 
-
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-    /* .test-media {background: pink;} */
+/* ************************************************** */
+/* ************************************************** */
+/* Transitions */
+.tr-1 {
+  -webkit-transition: all 0.1s;
+  -moz-transition: all 0.1s;
+  -ms-transition: all 0.1s;
+  -o-transition: all 0.1s;
+  transition: all 0.1s;
 }
+
+.tr-2 {
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.tr-5 {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.animated-fadeIn-5 {
+  -webkit-animation: fadein 2s;
+  /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s;
+  /* Firefox < 16 */
+  -ms-animation: fadein 2s;
+  /* Internet Explorer */
+  -o-animation: fadein 2s;
+  /* Opera < 12.1 */
+  animation: fadein 2s;
+}
+
+/* ************************************************** */
+/* ScrollBar */
+body::-webkit-scrollbar, div::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+body::-webkit-scrollbar-track, div::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px var(--primary-4);
+}
+
+body::-webkit-scrollbar-thumb, div::-webkit-scrollbar-thumb {
+  background-color: var(--primary-4);
+  outline: 1px solid rgba(112, 128, 144, 0.158);
+}
+
+/* ************************************************** */
 /* ************************************************** */
 /* Main */
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
-    width: 100%!important;
-    height: 100%!important;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    font-family: 'Roboto', sans-serif!important;
+  width: 100% !important;
+  height: 100% !important;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  font-family: "Roboto", sans-serif !important;
 }
 
 div#containerFluid {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-
-    /* border: 1px solid rgb(70, 180, 88); */
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
 }
 
+/* ************************************************** */
+/* ************************************************** */
+/* Default */
 .size-100 {
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
 }
 
-.title-1 {
-    font-size: 2em;
-    display: inline;
+.c-pointer {
+  cursor: pointer;
 }
 
-.cursor {
-    cursor: pointer;
+.pm-0 {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: white;
+}
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+  color: white;
+}
+a:active {
+  text-decoration: none;
+}
+
+/* ************************************************** */
+/* ************************************************** */
+/* KeyFrames */
+@keyframes rotate {
+  from {
+    -ms-transform: rotate(0deg);
+    /* IE 9 */
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    /* IE 9 */
+    transform: rotate(360deg);
+  }
+}
+.rotate {
+  animation: rotate 2s infinite linear;
 }
 
 /* ************************************************** */
 
-/* ************************************************** */
-/* Main */
-.main-container {
-    width: 100%;
-    height: 100%;
-    /* border: 1px solid rgb(11, 90, 0); */
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    /* justify-content: flex-start;
-    align-items: stretch;
-    align-content: stretch; */
-    overflow: hidden;
-}
-#mainContainer>main.main>div.container-fluid {
-    background-color: bisque;
-}
-
-#btnMenuToggleMain {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 2;
-    width: 2em;
-    height: 2em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: solid 1px #92072C;
-    border-radius: 50%;
-    margin: 0px;
-    opacity: 0.5;
-}
-
-#btnMenuToggleMain.btn-menu-main.btn-menu-expanded {
-    right: -20%;
-}
-
-#btnMenuClose {
-    position: fixed;
-    bottom: 20px;
-    right: -20%;
-    z-index: 3;
-    width: 2em;
-    height: 2em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: solid 1px #92072C;
-    border-radius: 50%;
-    margin: 0px;
-    background-color: lavender;
-}
-#btnMenuClose.btn-menu-main-close.btn-menu-expanded {
-    right: 20px;
-}
-
-main.main {
-    height: auto;
-    flex-grow: 1;
-    background-color: #f8f9fa;
-    padding: 5px 10px;
-    overflow: auto;
-}
-/* .m-sm-main-expanded {
-    margin-right: 250px;
-}
-.m-sm-main-collapsed {
-    margin-right: 0px;
-}
-.m-md-main-expanded {
-    margin-left: 250px;
-}
-.m-md-main-collapsed {
-    margin-left: 0px;
-} */
-/* ************************************************** */
-.header {
-    /* border: 1px solid rgb(180, 70, 70); */
-}
-
-.main {
-    /* border: 1px solid rgb(0, 71, 65); */
-}
+/*# sourceMappingURL=styles.css.map */

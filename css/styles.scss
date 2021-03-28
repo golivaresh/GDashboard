@@ -1,0 +1,178 @@
+/*
+Page Root
+└── body
+    ├── div#containerFluid
+        ├── div#sidebar > styles.sidebar.scss
+        ├── custom
+        ├── demos
+        ├── fonts
+        ├── img
+        ├── variables
+        └── styles.less
+     
+    └── components
+        ├── alerts       
+            └── alert.less
+*/
+/* ************************************************** */
+/* ************************************************** */
+// Variables
+/* Bootstrap Sizes:
+.col 		Extra Pequeño (Extra Small) - Smartphones Vertical		Menos de 544px
+.col-sm 	Pequeño (Small) - Smartphones Vertical	 				Mas de 544px y Menos de 768px
+.col-md 	Mediano (Medium) - Tablets 								Mas de 768px y Menos de 992px
+.col-lg 	Largo (Large) - Computadoras							Mas de 992px y Menos de 1200px
+.col-xl 	Extra Largo (Extra Large) - Computadoras				Mas de 1200px */
+
+/* Extra small devices (phones, 600px and down) */
+$breakpoint-xs: 600px;
+/* Small devices (portrait tablets and large phones, 600px and up) */
+$breakpoint-sm: 600px;
+/* Medium devices (landscape tablets, 768px and up) */
+$breakpoint-md: 768px;
+/* Large devices (laptops/desktops, 992px and up) */
+$breakpoint-lg: 992px;
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+$breakpoint-lx: 1200px;
+
+@mixin media( $media ) {
+    @if $media == xs {
+        @media ( max-width: $breakpoint-xs ) { @content; }
+    }
+    @else if $media == sm {
+        @media ( min-width: $breakpoint-sm ) { @content; }
+    }
+    @else if $media == md {
+        @media ( min-width: $breakpoint-md ) { @content; }
+    }
+    @else if $media == lg {
+        @media ( min-width: $breakpoint-lg ) { @content; }
+    }
+    @else if $media == xl {
+        @media ( min-width: $breakpoint-lx ) { @content; }
+    }
+}
+/* ************************************************** */
+/* ************************************************** */
+/* Transitions */
+.tr-1 {
+    -webkit-transition: all 0.1s;
+    -moz-transition: all 0.1s;
+    -ms-transition: all 0.1s;
+    -o-transition: all 0.1s;
+    transition: all 0.1s;
+}
+.tr-2 {
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+.tr-5 {
+    -webkit-transition: all 0.5s ;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.animated-fadeIn-5 {
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 2s; /* Firefox < 16 */
+    -ms-animation: fadein 2s; /* Internet Explorer */
+    -o-animation: fadein 2s; /* Opera < 12.1 */
+    animation: fadein 2s;
+}
+
+/* ************************************************** */
+/* ScrollBar */
+body::-webkit-scrollbar, div::-webkit-scrollbar {
+    width: 0.5em;
+}
+body::-webkit-scrollbar-track, div::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px var(--primary-4);
+}
+
+body::-webkit-scrollbar-thumb, div::-webkit-scrollbar-thumb {
+    background-color: var(--primary-4);
+    outline: 1px solid rgba(112, 128, 144, 0.158);
+}
+/* ************************************************** */
+/* ************************************************** */
+/* Main */
+* {
+    margin:0;
+    padding:0;
+}
+body {
+    width: 100%!important;
+    height: 100%!important;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    font-family: 'Roboto', sans-serif!important;
+}
+
+div#containerFluid {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+/* ************************************************** */
+/* ************************************************** */
+/* Default */
+.size-100 {
+    height: 100%;
+    width: 100%;
+}
+
+.c-pointer {
+    cursor: pointer;
+}
+
+.pm-0 {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: white;
+    &:link {
+        text-decoration: none;
+    }
+    
+    &:visited {
+        text-decoration: none;
+    }
+    
+    &:hover {
+        text-decoration: none;
+        color: white;
+    }
+    
+    &:active {
+        text-decoration: none;
+    }
+}
+
+/* ************************************************** */
+/* ************************************************** */
+/* KeyFrames */
+@keyframes rotate {
+    from {
+        -ms-transform: rotate(0deg); /* IE 9 */
+        transform: rotate(0deg);
+    }
+    to {
+        -ms-transform: rotate(360deg); /* IE 9 */
+        transform: rotate(360deg);
+    }
+}
+.rotate {
+    animation: rotate 2s infinite linear;
+}
+/* ************************************************** */

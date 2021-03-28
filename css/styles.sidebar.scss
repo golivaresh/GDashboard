@@ -1,0 +1,299 @@
+/* ************************************************** */
+/*
+Sidebar Root
+|-- body
+    |-- nav#sidebar.(m-collapsed/m-expanded)
+        |-- div#sidebarBg    // Backgound image for sidebar.
+        |-- div#sidebarContainer    // Sidebar Container.
+            |-- div#sidebarProfile
+                |-- div
+                |-- div.user-profile
+                    |-- profile-menu-icon
+                    |-- profile-menu-name
+                |-- div.user-profile
+                    |-- profile-menu-icon
+                    |-- profile-social
+            |--- div#sidebarOpc.m-opc.(m-opc-collapsed/m-opc-expanded)
+                |-- div#profileItems
+                    |-- ul
+                        |-- li.active
+                |-- div#sidebarAccordion
+                    |-- div.accordion-item{1...n}
+                        |-- div.accordion-header
+                            |-- div-accordion-button.(collapsed/"")
+                                |-- i.m-opc-icon
+                        |-- div.flushCollapse_*{1...n }.accordion-collapse.(collapse/"")
+            |-- div#sidebarFooter.sidebar-footer.text-footer
+                |-- div
+                    |-- div.copyright.pull-right
+*/
+/* ************************************************** */
+/* Imports */
+@import 'styles.scss';
+/* ************************************************** */
+/* Sidebar */
+nav#sidebar {
+    height: 100%;
+    position: fixed!important;
+    margin: 0;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    display: flex;
+    color: whitesmoke;
+    z-index: 2;
+    width: 100%;
+    &.m-collapsed {
+        top: 100%;
+    }
+    &.m-expanded {
+        top: 0;
+    }
+    div#sidebarBg {
+        background: url("../img/sidebar-bg-1.jpg");
+    }
+    div#sidebarContainer {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        background-color: rgba( var(--background-s-val), 0.9);
+        div#sidebarProfile {
+            @extend .m-border-b;
+            padding-top: 10px;
+            div img#imgProfile {
+                width: 20%;
+                border-radius: 50%;
+                border: solid var( --light-1 );
+                &:hover {
+                    animation: flip;
+                    animation-duration: 2s;
+                }
+            }
+            .user-profile {
+                display: flex;
+                font-size: 2rem;
+                width: 100%;
+                .profile-menu-icon {
+                    width: 70px;
+                    text-align: center;
+                    padding-top: 5px;
+                    display: none;
+                    i {
+                        @extend .m-icon;
+                    }
+                }
+                .profile-menu-name {
+                    display: flex;
+                    text-align: center;
+                    align-items: center;
+                    flex-grow: 2;
+                    justify-content: center;
+                    font-size: 1.1rem;
+                }
+                .profile-social {
+                    display: flex;
+                    justify-content: space-evenly;
+                    flex-grow: 2;
+                    align-items: center;
+                    padding: 10px 0px;
+                    i {
+                        color: rgba(247, 231, 121, 1);
+                        &:hover {
+                            animation: heartBeat;
+                            animation-duration: 1s;
+                            color: rgba(222, 121, 247, 1);
+                        }
+                    }
+                }
+                @include media( md ) {
+                    .profile-menu-icon {
+                        display: block;
+                    }
+                    .profile-menu-name {
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+            @include media( sm ) {
+                div img#imgProfile {
+                    width: 15%;
+                }
+            }
+            @include media( md ) {
+                .user-profile {
+                    font-size: 1.5em;
+                    width: 250px;
+                }
+                div img#imgProfile {
+                    width: 35%;
+                }
+            }
+        }
+        div#sidebarOpc {
+            overflow-y: auto;
+            overflow-x: hidden;
+            flex-grow: 1;
+            &.m-opc {
+                width: 100%;
+            }
+            &.m-opc-expanded {
+                div#sidebarAccordion {
+                    .accordion-item {
+                        div[id^="flushCollapse"] {
+                            @extend .tr-1;
+                        }
+                    }
+                }
+            }
+            div#profileItems {
+                width: 100%;
+                @extend .m-border-b;
+                ul {
+                    padding: 0px;
+                    margin: 0px;
+                    li {
+                        list-style: none;
+                        background-color: rgba(255, 255, 255, 0);
+                        padding: 0.3rem 1.25rem;
+                        &.active {
+                            background-color: rgba(var(--dark-1-val), 0.27);
+                        }
+                        &:hover {
+                            animation: shakeX;
+                            animation-duration: 2s;
+                            background-color: var(--primary-2);
+                        }
+                        i {
+                            @extend .m-icon;
+                            width: 70px;
+                            text-align: center;
+                        }
+                    }
+                }
+                @include media( md ) {
+                    & {
+                        width: 250px;
+                    }
+                    ul li {
+                        padding: 0.3rem 0rem;
+                    }
+                }
+            }
+            div#sidebarAccordion {
+                .accordion-item {
+                    .accordion-header:not(.collapsed) {
+                        &.active{
+                            background-color: rgba(var(--dark-1), 0.27);
+                        }
+                        &:hover {
+                            background-color: var(--primary-2);
+                        }
+                        .accordion-button{
+                            &.collapsed {
+                                color: #ffffff;
+                            }
+                            &:not(.collapsed) {
+                                color: var(--light-2);
+                                background-color: var(--primary-1);
+                            }
+                            i {
+                                @extend .m-icon;
+                            }
+                            @include media( md ){
+                                padding: 1rem 0rem;
+                                padding-right: 1rem;
+                            }
+                        }
+                    }
+                    div[id^="flushCollapse"] {
+                        text-align: center;
+                        div.accordion-collapse {
+                            background-color: var(--primary-3);
+                        }
+                        @include media( md ){
+                            text-align: left;
+                        }
+                        ul {
+                            @extend .pm-0;
+                            li {
+                                list-style: none;
+                                padding: 15px 10px;
+                                background-color: rgb(255, 255, 255, 0);
+                                &:hover {
+                                    animation: shakeX;
+                                    animation-duration: 2s;
+                                }
+                                &.active {
+                                    background-color: rgb(var(--dark-1-val), 0.27);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            @include media( md ) {
+                &.m-opc {
+                    width: 250px;
+                }
+            }
+        }
+        div#sidebarFooter {
+            border-top: solid 1px rgba(255, 255, 255, 0.281);
+            padding-top: 5px;
+            padding-bottom: 5px;
+            height: auto;
+        }
+    }
+    @include media( xs ) {
+        // &.m-expanded {
+        //     width: 100%;
+        // }
+    }
+    @include media( sm ) {
+        // &.m-expanded {
+        //     width: 100%;
+        // }
+    }
+    @include media( md ) {
+        left: 0;
+        &.m-collapsed {
+            &:hover {
+                width: 250px;
+            }
+            width: 70px;
+            top: 0;
+            div#sidebarContainer {
+                div#sidebarProfile {
+                    div img#imgProfile {
+                        min-width: 50px;
+                    }
+                }
+            }
+        }
+        &.m-expanded {
+            width: 250px;
+        }
+    }
+}
+.m-opc-icon {
+    text-align: center;
+    width: 70px;
+}
+.m-icon {
+    font-size: 1.5rem;
+    color: var( --icon );
+    @include media( md ){
+        font-size: 1.2rem;
+    }
+}
+.m-border-b {
+    border-bottom: solid 1px rgba(255, 255, 255, 0.281);
+}
+.copyright {
+    color: var( --light-1 );
+    @extend .tr-2;
+    &:hover {
+        color:#9c9c9c;
+        animation: rubberBand;
+        animation-duration: 2s;
+    }
+}
+/* ************************************************** */

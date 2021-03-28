@@ -64,25 +64,61 @@
 /* http://paletton.com */
 
 :root {
-    --bg-primary: #92072C;
-    --bg-primary-rgb: rgba(212, 19, 32, 0.90);
-    --bg-primary-rgb-2:  rgba(212,105,134,1);
-    --bg-primary-m-acc: #c30000;
-    --bg-primary-m-rgb: rgba(212, 19, 32, 0.97);
-    --bg-primary-m-rgb-2:  rgba(202,0,55,1);
-    --text-primary-m: ##e29c98;
+    /* --bg-primary: #92072C; */
+    /* --bg-primary-rgb: rgba(212, 19, 32, 0.90); */
+    /* --bg-primary-rgb-2:  rgba(212,105,134,1); */
+    /* --bg-primary-m-acc: #c30000; */
+    /* --bg-primary-m-rgb: rgba(212, 19, 32, 0.97); */
+    /* --bg-primary-m-rgb-2:  rgba(202,0,55,1); */
+    /* --text-primary-m: ##e29c98; */
 
     /* Sidebar */
-    --bg-m-container-red: rgba(212, 19, 32, 0.90);
-    --bg-m-opc-select-red: #92072C;
-    --bg-m-opc-collapse-red: rgba(202,0,55,1);
-    --bg-m-opc-active-red: #63636345;
-    --bg-m-opc-no-active-red: rgba(255, 255, 255, 0);
+    /* --bg-m-container-red: rgba(212, 19, 32, 0.90); */
+    /* --bg-m-opc-select-red: #92072C; */
+    /* --bg-m-opc-collapse-red: rgba(202,0,55,1); */
+    /* --bg-m-opc-active-red: #63636345; */
+    /* --bg-m-opc-no-active-red: rgba(255, 255, 255, 0); */
     
     /* Menu */
     --bg-header-link-red: rgba(202,0,55,1);
     --bg-header-link-hover-red:rgb(241, 3, 67);
     --bg-header-opc-hover-red: #e99fb0;
     --bg-header-opc-active-red: rgba(250, 65, 77, 0.97);
-    
+}
+
+:root {
+    /* Theme */
+    --background-s: rgb(212, 19, 32);
+    --background-s-val: 212, 19, 32;
+
+    /* Fix */
+    --dark-1: rgb(99, 99, 99);
+    --dark-1-val: 99, 99, 99;
+}
+.theme-red {
+    /* Theme */
+    --background-s: rgb(212, 19, 32);
+    --background-s-val: 212, 19, 32;
+    --background-s-2: rgba(250, 65, 77);
+    --background-s-2-val: 250, 65, 77;
+    --primary-1: rgb(146, 7, 44);
+    --primary-1-val: 146, 7, 44;
+    --primary-2: rgb(195, 0, 0);
+    --primary-2-val: 195, 0, 0;
+    --primary-3: rgba(202,0,55,1);
+    --primary-3-val: 202,0,55,1;
+    --primary-4: rgb(255, 1, 65);
+    --primary-4-val: 255, 1, 65;
+    --primary-5: rgb(255, 99, 71);
+    --primary-5-val: 255, 99, 71;
+    --light-1: rgb(235, 161, 178);
+    --light-1-val: 235, 161, 178;
+    --light-2: rgb(226, 156, 152);
+    --light-2-val: 226, 156, 152;
+    --icon: rgb(58, 218, 255);
+    --icon-val: 58 218 255;
+}
+.theme-black {
+    --background-s: rgb(56, 56, 56);
+    --background-s-val: 56, 56, 56;
 }

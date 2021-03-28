@@ -1,9 +1,51 @@
+@charset "UTF-8";
 /* ************************************************** */
-/* Root */
-:root {
-    --wm-md-collapsed: 50px;
-    --wm-md-expanded: 50px;
-}
+/*
+Sidebar Root
+|-- body
+    |-- nav#sidebar.(m-collapsed/m-expanded)
+        |-- div#sidebarBg    // Backgound image for sidebar.
+        |-- div#sidebarContainer    // Sidebar Container.
+            |-- div#sidebarProfile
+                |-- div
+                |-- div.user-profile
+                    |-- profile-menu-icon
+                    |-- profile-menu-name
+                |-- div.user-profile
+                    |-- profile-menu-icon
+                    |-- profile-social
+            |--- div#sidebarOpc.m-opc.(m-opc-collapsed/m-opc-expanded)
+                |-- div#profileItems
+                    |-- ul
+                        |-- li.active
+                |-- div#sidebarAccordion
+                    |-- div.accordion-item{1...n}
+                        |-- div.accordion-header
+                            |-- div-accordion-button.(collapsed/"")
+                                |-- i.m-opc-icon
+                        |-- div.flushCollapse_*{1...n }.accordion-collapse.(collapse/"")
+            |-- div#sidebarFooter.sidebar-footer.text-footer
+                |-- div
+                    |-- div.copyright.pull-right
+*/
+/* ************************************************** */
+/* Imports */
+/*
+Page Root
+└── body
+    ├── div#containerFluid
+        ├── div#sidebar > styles.sidebar.scss
+        ├── custom
+        ├── demos
+        ├── fonts
+        ├── img
+        ├── variables
+        └── styles.less
+
+    └── components
+        ├── alerts       
+            └── alert.less
+*/
 /* ************************************************** */
 /* ************************************************** */
 /* Bootstrap Sizes:
@@ -13,185 +55,379 @@
 .col-lg 	Largo (Large) - Computadoras							Mas de 992px y Menos de 1200px
 .col-xl 	Extra Largo (Extra Large) - Computadoras				Mas de 1200px */
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-    .sidebar {
-        /* right: 0; */
-        width: 100%;
-    }
-    .m-collapsed {
-        /* width: 0px; */
-        top: 100%;
-    }
-    .m-expanded {
-        
-        top: 0%;
-    }
-    .m-opc>div.m-opc-icon {
-        text-align: center;
-    }
-}
-
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-    .sidebar {
-        /* right: 0; */
-        width: 100%;
-    }
-    .m-collapsed {
-        /* width: 0px; */
-        top: 100%;
-    }
-    .m-expanded {
-        /* width: 60%; */
-        /* width: 100%; */
-        top: 0%;
-    }
-    .accordion-button {
-        padding: 1rem 1rem;
-    }
-}
-
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-    .sidebar {
-        left: 0;
-        top: 0%;
-    }
-    .sidebar:hover {
-        width: 250px;
-    }
-    .m-main-expanded {
-        margin-left: 250px;
-    }
-    .m-main-collapsed {
-        margin-left: 70px;
-    }
-    .m-collapsed {
-        width: 70px;
-    }
-    .m-expanded {
-        width: 250px;
-    }
-    .m-opc {
-        width: 250px;
-    }
-    .accordion-button {
-        padding: 1rem 0rem;
-        padding-right: 1rem;
-    }
-} 
-
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-} 
-
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
+/* ************************************************** */
+/* ************************************************** */
+/* Transitions */
+.tr-1, nav#sidebar div#sidebarContainer div#sidebarOpc.m-opc-expanded div#sidebarAccordion .accordion-item div[id^=flushCollapse] {
+  -webkit-transition: all 0.1s;
+  -moz-transition: all 0.1s;
+  -ms-transition: all 0.1s;
+  -o-transition: all 0.1s;
+  transition: all 0.1s;
 }
+
+.tr-2, .copyright {
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.tr-5 {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.animated-fadeIn-5 {
+  -webkit-animation: fadein 2s;
+  /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s;
+  /* Firefox < 16 */
+  -ms-animation: fadein 2s;
+  /* Internet Explorer */
+  -o-animation: fadein 2s;
+  /* Opera < 12.1 */
+  animation: fadein 2s;
+}
+
+/* ************************************************** */
+/* ScrollBar */
+body::-webkit-scrollbar, div::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+body::-webkit-scrollbar-track, div::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px var(--primary-4);
+}
+
+body::-webkit-scrollbar-thumb, div::-webkit-scrollbar-thumb {
+  background-color: var(--primary-4);
+  outline: 1px solid rgba(112, 128, 144, 0.158);
+}
+
+/* ************************************************** */
+/* ************************************************** */
+/* Main */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100% !important;
+  height: 100% !important;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  font-family: "Roboto", sans-serif !important;
+}
+
+div#containerFluid {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+/* ************************************************** */
+/* ************************************************** */
+/* Default */
+.size-100 {
+  height: 100%;
+  width: 100%;
+}
+
+.c-pointer {
+  cursor: pointer;
+}
+
+.pm-0, nav#sidebar div#sidebarContainer div#sidebarOpc div#sidebarAccordion .accordion-item div[id^=flushCollapse] ul {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: white;
+}
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+  color: white;
+}
+a:active {
+  text-decoration: none;
+}
+
+/* ************************************************** */
+/* ************************************************** */
+/* KeyFrames */
+@keyframes rotate {
+  from {
+    -ms-transform: rotate(0deg);
+    /* IE 9 */
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    /* IE 9 */
+    transform: rotate(360deg);
+  }
+}
+.rotate {
+  animation: rotate 2s infinite linear;
+}
+
 /* ************************************************** */
 /* ************************************************** */
 /* Sidebar */
-#sidebar {
-    height: 100%;
-    position: fixed!important;
-    /* left: 0; */
-    margin: 0;
-    /* border: 1px solid steelblue; */
-    overflow-x: hidden; /* Disable horizontal scroll */
-    display: flex;
-    color: whitesmoke;
-    z-index: 2;
+nav#sidebar {
+  height: 100%;
+  position: fixed !important;
+  margin: 0;
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  display: flex;
+  color: whitesmoke;
+  z-index: 2;
+  width: 100%;
 }
-#sidebar>#btnMenuSm>.menuToggle{
-    /* width: 100%; */
-    /* position: absolute; */
-    text-align: right;
-    color:whitesmoke;
-    /* padding-right: 5px; */
-    /* padding-top: 5px; */
-    padding: 10px;
-    font-size: 1.7em;
+nav#sidebar.m-collapsed {
+  top: 100%;
 }
-#sidebar>.sidebar-bg {
-    padding: 0;
-    margin: 0;
-    background: url("../img/sidebar-bg-1.jpg");
+nav#sidebar.m-expanded {
+  top: 0;
 }
-#sidebar>.sidebar-container {
-    position: absolute;
-    padding: 0px;
-    background-color: var(--bg-m-container-red);
+nav#sidebar div#sidebarBg {
+  background: url("../img/sidebar-bg-1.jpg");
 }
-#sidebar img.sidebar-logo {
-    width: 50px;
+nav#sidebar div#sidebarContainer {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background-color: rgba(var(--background-s-val), 0.9);
 }
-#sidebar>#sidebarContainer {
-    display: flex;
-    flex-direction: column;
+nav#sidebar div#sidebarContainer div#sidebarProfile {
+  padding-top: 10px;
 }
-#sidebar>#sidebarContainer>#sidebarFooter.sidebar-footer {
-    border-top: solid 1px rgba(255, 255, 255, 0.281);
-    padding-top: 5px;
-    padding-bottom: 5px;
-    height: auto;
+nav#sidebar div#sidebarContainer div#sidebarProfile div img#imgProfile {
+  width: 20%;
+  border-radius: 50%;
+  border: solid var(--light-1);
 }
-#sidebar>#sidebarContainer>#sidebarOpc {
-    height: var(--m-sidebar-footer-h-px);
-    overflow-y: auto;
-    overflow-x: hidden;
-    flex-grow: 1;
+nav#sidebar div#sidebarContainer div#sidebarProfile div img#imgProfile:hover {
+  animation: flip;
+  animation-duration: 2s;
 }
-#sidebarOpc.m-opc-expanded>#sidebarAccordion>div.accordion-item>div[id^="flushCollapse"] {
-    -webkit-transition: all 0.1s;
-    -moz-transition: all 0.1s;
-    -ms-transition: all 0.1s;
-    -o-transition: all 0.1s;
-    transition: all 0.1s;
+nav#sidebar div#sidebarContainer div#sidebarProfile .user-profile {
+  display: flex;
+  font-size: 2rem;
+  width: 100%;
 }
-/* #sidebar>#sidebarContainer>#sidebarOpc.m-opc-expanded>.accordion.accordion-flush {
-    
-} */
-i.m-opc-icon {
-    text-align: center;
+nav#sidebar div#sidebarContainer div#sidebarProfile .user-profile .profile-menu-icon {
+  width: 70px;
+  text-align: center;
+  padding-top: 5px;
+  display: none;
+}
+nav#sidebar div#sidebarContainer div#sidebarProfile .user-profile .profile-menu-name {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-grow: 2;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+nav#sidebar div#sidebarContainer div#sidebarProfile .user-profile .profile-social {
+  display: flex;
+  justify-content: space-evenly;
+  flex-grow: 2;
+  align-items: center;
+  padding: 10px 0px;
+}
+nav#sidebar div#sidebarContainer div#sidebarProfile .user-profile .profile-social i {
+  color: #f7e779;
+}
+nav#sidebar div#sidebarContainer div#sidebarProfile .user-profile .profile-social i:hover {
+  animation: heartBeat;
+  animation-duration: 1s;
+  color: #de79f7;
+}
+@media (min-width: 768px) {
+  nav#sidebar div#sidebarContainer div#sidebarProfile .user-profile .profile-menu-icon {
+    display: block;
+  }
+  nav#sidebar div#sidebarContainer div#sidebarProfile .user-profile .profile-menu-name {
+    font-size: 0.8rem;
+  }
+}
+@media (min-width: 600px) {
+  nav#sidebar div#sidebarContainer div#sidebarProfile div img#imgProfile {
+    width: 15%;
+  }
+}
+@media (min-width: 768px) {
+  nav#sidebar div#sidebarContainer div#sidebarProfile .user-profile {
+    font-size: 1.5em;
+    width: 250px;
+  }
+  nav#sidebar div#sidebarContainer div#sidebarProfile div img#imgProfile {
+    width: 35%;
+  }
+}
+nav#sidebar div#sidebarContainer div#sidebarOpc {
+  overflow-y: auto;
+  overflow-x: hidden;
+  flex-grow: 1;
+}
+nav#sidebar div#sidebarContainer div#sidebarOpc.m-opc {
+  width: 100%;
+}
+nav#sidebar div#sidebarContainer div#sidebarOpc div#profileItems {
+  width: 100%;
+}
+nav#sidebar div#sidebarContainer div#sidebarOpc div#profileItems ul {
+  padding: 0px;
+  margin: 0px;
+}
+nav#sidebar div#sidebarContainer div#sidebarOpc div#profileItems ul li {
+  list-style: none;
+  background-color: rgba(255, 255, 255, 0);
+  padding: 0.3rem 1.25rem;
+}
+nav#sidebar div#sidebarContainer div#sidebarOpc div#profileItems ul li.active {
+  background-color: rgba(var(--dark-1-val), 0.27);
+}
+nav#sidebar div#sidebarContainer div#sidebarOpc div#profileItems ul li:hover {
+  animation: shakeX;
+  animation-duration: 2s;
+  background-color: var(--primary-2);
+}
+nav#sidebar div#sidebarContainer div#sidebarOpc div#profileItems ul li i {
+  width: 70px;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  nav#sidebar div#sidebarContainer div#sidebarOpc div#profileItems {
+    width: 250px;
+  }
+  nav#sidebar div#sidebarContainer div#sidebarOpc div#profileItems ul li {
+    padding: 0.3rem 0rem;
+  }
+}
+nav#sidebar div#sidebarContainer div#sidebarOpc div#sidebarAccordion .accordion-item .accordion-header:not(.collapsed).active {
+  background-color: rgba(var(--dark-1), 0.27);
+}
+nav#sidebar div#sidebarContainer div#sidebarOpc div#sidebarAccordion .accordion-item .accordion-header:not(.collapsed):hover {
+  background-color: var(--primary-2);
+}
+nav#sidebar div#sidebarContainer div#sidebarOpc div#sidebarAccordion .accordion-item .accordion-header:not(.collapsed) .accordion-button.collapsed {
+  color: #ffffff;
+}
+nav#sidebar div#sidebarContainer div#sidebarOpc div#sidebarAccordion .accordion-item .accordion-header:not(.collapsed) .accordion-button:not(.collapsed) {
+  color: var(--light-2);
+  background-color: var(--primary-1);
+}
+@media (min-width: 768px) {
+  nav#sidebar div#sidebarContainer div#sidebarOpc div#sidebarAccordion .accordion-item .accordion-header:not(.collapsed) .accordion-button {
+    padding: 1rem 0rem;
+    padding-right: 1rem;
+  }
+}
+nav#sidebar div#sidebarContainer div#sidebarOpc div#sidebarAccordion .accordion-item div[id^=flushCollapse] {
+  text-align: center;
+}
+nav#sidebar div#sidebarContainer div#sidebarOpc div#sidebarAccordion .accordion-item div[id^=flushCollapse] div.accordion-collapse {
+  background-color: var(--primary-3);
+}
+@media (min-width: 768px) {
+  nav#sidebar div#sidebarContainer div#sidebarOpc div#sidebarAccordion .accordion-item div[id^=flushCollapse] {
+    text-align: left;
+  }
+}
+nav#sidebar div#sidebarContainer div#sidebarOpc div#sidebarAccordion .accordion-item div[id^=flushCollapse] ul li {
+  list-style: none;
+  padding: 15px 10px;
+  background-color: rgba(255, 255, 255, 0);
+}
+nav#sidebar div#sidebarContainer div#sidebarOpc div#sidebarAccordion .accordion-item div[id^=flushCollapse] ul li:hover {
+  animation: shakeX;
+  animation-duration: 2s;
+}
+nav#sidebar div#sidebarContainer div#sidebarOpc div#sidebarAccordion .accordion-item div[id^=flushCollapse] ul li.active {
+  background-color: rgb(var(--dark-1-val), 0.27);
+}
+@media (min-width: 768px) {
+  nav#sidebar div#sidebarContainer div#sidebarOpc.m-opc {
+    width: 250px;
+  }
+}
+nav#sidebar div#sidebarContainer div#sidebarFooter {
+  border-top: solid 1px rgba(255, 255, 255, 0.281);
+  padding-top: 5px;
+  padding-bottom: 5px;
+  height: auto;
+}
+@media (min-width: 768px) {
+  nav#sidebar {
+    left: 0;
+  }
+  nav#sidebar.m-collapsed {
     width: 70px;
+    top: 0;
+  }
+  nav#sidebar.m-collapsed:hover {
+    width: 250px;
+  }
+  nav#sidebar.m-collapsed div#sidebarContainer div#sidebarProfile div img#imgProfile {
+    min-width: 50px;
+  }
+  nav#sidebar.m-expanded {
+    width: 250px;
+  }
 }
 
-img#sidebar-logo{
-    width: 30px;
-    /* position: absolute; */
+.m-opc-icon {
+  text-align: center;
+  width: 70px;
 }
 
-.accordion-collapse>ul {
-    padding: 0px;
-    margin: 0px;
+.m-icon, nav#sidebar div#sidebarContainer div#sidebarProfile .user-profile .profile-menu-icon i, nav#sidebar div#sidebarContainer div#sidebarOpc div#profileItems ul li i, nav#sidebar div#sidebarContainer div#sidebarOpc div#sidebarAccordion .accordion-item .accordion-header:not(.collapsed) .accordion-button i {
+  font-size: 1.5rem;
+  color: var(--icon);
 }
-.accordion-collapse>ul>li {
-    list-style: none;
-    padding: 15px 10px;
-    background-color: var(--bg-m-opc-no-active-red);
-}
-
-.accordion-collapse>ul>li:hover {
-    /* display: inline-block; */
-    animation: shakeX;
-    animation-duration: 2s;
-}
-.accordion-collapse>ul>li.active {
-    background-color: var(--bg-m-opc-active-red);
+@media (min-width: 768px) {
+  .m-icon, nav#sidebar div#sidebarContainer div#sidebarProfile .user-profile .profile-menu-icon i, nav#sidebar div#sidebarContainer div#sidebarOpc div#profileItems ul li i, nav#sidebar div#sidebarContainer div#sidebarOpc div#sidebarAccordion .accordion-item .accordion-header:not(.collapsed) .accordion-button i {
+    font-size: 1.2rem;
+  }
 }
 
-.accordion-collapse {
-    background-color: var(--bg-m-opc-collapse-red);
+.m-border-b, nav#sidebar div#sidebarContainer div#sidebarProfile, nav#sidebar div#sidebarContainer div#sidebarOpc div#profileItems {
+  border-bottom: solid 1px rgba(255, 255, 255, 0.281);
 }
-.accordion-header:not(.collapsed):hover {
-    background-color: var(--bg-primary-m-acc);
+
+.copyright {
+  color: var(--light-1);
 }
-.accordion-button.collapsed {
-    color: #ffffff;
-}
-.accordion-button:not(.collapsed) {
-    color: var(--text-primary-m);
-    background-color: var(--bg-m-opc-select-red);
+.copyright:hover {
+  color: #9c9c9c;
+  animation: rubberBand;
+  animation-duration: 2s;
 }
 
 /* ************************************************** */
+
+/*# sourceMappingURL=styles.sidebar.css.map */

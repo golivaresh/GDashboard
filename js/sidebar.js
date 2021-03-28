@@ -17,6 +17,7 @@ $( document ).ready( ($) => {
     sidebarContainer = $( '#sidebarContainer' );
     sidebarOpc = $( '#sidebarOpc' );
     sidebarFooter = $( '#sidebarFooter' );
+    sidebarProfileOpc = $( '#sidebar>#sidebarContainer>#sidebarOpc>#profileItems>ul>li' );
     sidebarAccordionOpc = $( '#sidebarAccordion>div.accordion-item>[class^="accordion-collapse"]>ul>li' );
     sidebarAccordionFlush = $('#sidebarAccordion>div.accordion-item>div[id^="flushCollapse"].collapse');
     if ( !isSmallScreen() ) {
@@ -28,13 +29,12 @@ $( document ).ready( ($) => {
         toggleMenu();
         e.preventDefault();
     });
+    sidebarProfileOpc.click( (e) => {
+        clickInSmallScreen( e );
+        e.preventDefault();
+    });
     sidebarAccordionOpc.click( (e) => {
-        // Check if we are in a small screen and the selected button does not have the "active" class.
-        if ( isSmallScreen() && !$(e.target || e.toElement).hasClass('active') ) {
-            setTimeout(() => {
-                toggleMenu();
-            }, 100);
-        }
+        clickInSmallScreen( e );
         e.preventDefault();
     });
     sidebar.hover(
@@ -54,6 +54,14 @@ $( document ).ready( ($) => {
     );
     /* *************************************************************************************************** */
 });
+const clickInSmallScreen = ( e ) => {
+    // Check if we are in a small screen and the selected button does not have the "active" class.
+    if ( isSmallScreen() && !$(e.target || e.toElement).hasClass('active') ) {
+        setTimeout(() => {
+            toggleMenu();
+        }, 100);
+    }
+};
 /* *************************************************************************************************** */
 /* *************************************************************************************************** */
 // Screen Size functions
