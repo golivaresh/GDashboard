@@ -314,14 +314,16 @@ nav#sidebar div#sidebarContainer div#sidebarOpc div#profileItems ul li {
 nav#sidebar div#sidebarContainer div#sidebarOpc div#profileItems ul li.active {
   background-color: rgba(var(--light-1-val), 0.27);
 }
-nav#sidebar div#sidebarContainer div#sidebarOpc div#profileItems ul li:hover {
-  animation: shakeX;
-  animation-duration: 2s;
-  background-color: var(--primary-2);
-}
 nav#sidebar div#sidebarContainer div#sidebarOpc div#profileItems ul li i {
   width: 70px;
   text-align: center;
+}
+@media (min-width: 768px) {
+  nav#sidebar div#sidebarContainer div#sidebarOpc div#profileItems ul li:hover {
+    animation: shakeX;
+    animation-duration: 2s;
+    background-color: var(--primary-2);
+  }
 }
 @media (min-width: 768px) {
   nav#sidebar div#sidebarContainer div#sidebarOpc div#profileItems {
@@ -334,9 +336,6 @@ nav#sidebar div#sidebarContainer div#sidebarOpc div#profileItems ul li i {
 nav#sidebar div#sidebarContainer div#sidebarOpc div#sidebarAccordion .accordion-item .accordion-header:not(.collapsed).active {
   background-color: rgba(var(--dark-1), 0.27);
 }
-nav#sidebar div#sidebarContainer div#sidebarOpc div#sidebarAccordion .accordion-item .accordion-header:not(.collapsed):hover {
-  background-color: var(--primary-2);
-}
 nav#sidebar div#sidebarContainer div#sidebarOpc div#sidebarAccordion .accordion-item .accordion-header:not(.collapsed) .accordion-button.collapsed {
   color: #ffffff;
 }
@@ -348,6 +347,11 @@ nav#sidebar div#sidebarContainer div#sidebarOpc div#sidebarAccordion .accordion-
   nav#sidebar div#sidebarContainer div#sidebarOpc div#sidebarAccordion .accordion-item .accordion-header:not(.collapsed) .accordion-button {
     padding: 1rem 0rem;
     padding-right: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  nav#sidebar div#sidebarContainer div#sidebarOpc div#sidebarAccordion .accordion-item .accordion-header:not(.collapsed):hover {
+    background-color: var(--primary-2);
   }
 }
 nav#sidebar div#sidebarContainer div#sidebarOpc div#sidebarAccordion .accordion-item div[id^=flushCollapse] {

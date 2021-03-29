@@ -156,15 +156,17 @@ nav#sidebar {
                         &.active {
                             background-color: rgba(var(--light-1-val), 0.27);
                         }
-                        &:hover {
-                            animation: shakeX;
-                            animation-duration: 2s;
-                            background-color: var(--primary-2);
-                        }
                         i {
                             @extend .m-icon;
                             width: 70px;
                             text-align: center;
+                        }
+                        @include media( md ) {
+                            &:hover {
+                                animation: shakeX;
+                                animation-duration: 2s;
+                                background-color: var(--primary-2);
+                            }
                         }
                     }
                 }
@@ -183,9 +185,6 @@ nav#sidebar {
                         &.active{
                             background-color: rgba(var(--dark-1), 0.27);
                         }
-                        &:hover {
-                            background-color: var(--primary-2);
-                        }
                         .accordion-button{
                             &.collapsed {
                                 color: #ffffff;
@@ -200,6 +199,11 @@ nav#sidebar {
                             @include media( md ){
                                 padding: 1rem 0rem;
                                 padding-right: 1rem;
+                            }
+                        }
+                        @include media( md ) {
+                            &:hover {
+                                background-color: var(--primary-2);
                             }
                         }
                     }

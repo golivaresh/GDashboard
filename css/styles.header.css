@@ -187,19 +187,34 @@ header.header {
   box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  max-height: 150px;
   z-index: 1;
   padding: 0.5rem 0.1rem;
   background-color: var(--background-s-1);
 }
 @media (min-width: 768px) {
   header.header {
-    padding: 1rem 0.5rem;
+    padding: 1rem 0.5rem 1rem 0.5rem;
   }
 }
 
 .btn-menu {
   color: var(--primary-3);
 }
+div#actionSection {
+  z-index: 2;
+  display: flex;
+  padding: 5px 5px 0px 5px;
+  border-top: solid 1px var(--primary-4);
+}
+div#actionSection div#actionInput {
+  display: flex;
+  align-items: center;
+}
+div#actionSection div#actionInput > div.inactive {
+  display: none;
+}
+
 /* ************************************************** */
 
 /*# sourceMappingURL=styles.header.css.map */
