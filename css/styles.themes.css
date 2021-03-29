@@ -80,10 +80,10 @@
     /* --bg-m-opc-no-active-red: rgba(255, 255, 255, 0); */
     
     /* Menu */
-    --bg-header-link-red: rgba(202,0,55,1);
-    --bg-header-link-hover-red:rgb(241, 3, 67);
-    --bg-header-opc-hover-red: #e99fb0;
-    --bg-header-opc-active-red: rgba(250, 65, 77, 0.97);
+    /* --bg-header-link-red: rgba(202,0,55,1); */
+    /* --bg-header-link-hover-red:rgb(241, 3, 67); */
+    /* --bg-header-opc-hover-red: rgb(233, 159, 176); */
+    /* --bg-header-opc-active-red: rgba(250, 65, 77, 0.97); */
 }
 
 :root {
@@ -99,26 +99,72 @@
     /* Theme */
     --background-s: rgb(212, 19, 32);
     --background-s-val: 212, 19, 32;
+    --background-s-1: rgb(240, 240, 240);
+    --background-s-1-val: 240, 240, 240;
     --background-s-2: rgba(250, 65, 77);
     --background-s-2-val: 250, 65, 77;
     --primary-1: rgb(146, 7, 44);
     --primary-1-val: 146, 7, 44;
     --primary-2: rgb(195, 0, 0);
     --primary-2-val: 195, 0, 0;
-    --primary-3: rgba(202,0,55,1);
-    --primary-3-val: 202,0,55,1;
+    --primary-3: rgba(202,0,55);
+    --primary-3-val: 202,0,55;
     --primary-4: rgb(255, 1, 65);
     --primary-4-val: 255, 1, 65;
     --primary-5: rgb(255, 99, 71);
     --primary-5-val: 255, 99, 71;
+    --primary-6:rgb(241, 3, 67);
+    --primary-6-val: 241, 3, 67;
     --light-1: rgb(235, 161, 178);
     --light-1-val: 235, 161, 178;
     --light-2: rgb(226, 156, 152);
     --light-2-val: 226, 156, 152;
-    --icon: rgb(58, 218, 255);
-    --icon-val: 58 218 255;
+    --light-3: rgb(248, 249, 250);
+    --light-3-val: 248, 249, 250;
+    --light-4: rgb(58, 218, 255);
+    --light-4-val: 58, 218, 255;
+    --light-5: rgb(247, 231, 121);
+    --light-5-val: 247, 231, 121;
+    --light-6: rgb(233, 159, 176);
+    --light-6-val: 233, 159, 176;
+    --light-7: rgba(222, 121, 247);
+    --light-7-val: 222, 121, 247;
+    --text-1: rgb(20, 20, 20);
+    --text-1-val: 20, 20, 20;
 }
 .theme-black {
     --background-s: rgb(56, 56, 56);
     --background-s-val: 56, 56, 56;
+    --background-s-1: rgb(58, 58, 58);
+    --background-s-1-val: 58, 58, 58;
+    --background-s-2: rgb(70, 74, 88);
+    --background-s-2-val: 70, 74, 88;
+    --primary-1: rgb(46, 46, 46);
+    --primary-1-val: 46, 46, 46;
+    --primary-2: rgb(161, 174, 182);
+    --primary-2-val: 161, 174, 182;
+    --primary-3: rgb(178, 219, 243);
+    --primary-3-val: 202,0,55,1;
+    --primary-4: rgb(145, 145, 145);
+    --primary-4-val: 145, 145, 145;
+    --primary-5: rgb(161, 168, 206);
+    --primary-5-val: 161, 168, 206;
+    --primary-6:rgb(117, 117, 117);
+    --primary-6-val: 117, 117, 117;
+    --light-7: rgb(205, 237, 255);
+    --light-7-val: 205, 237, 255;
+    --light-1: rgb(117, 129, 134);
+    --light-1-val: 117, 129, 134;
+    --light-2: rgb(22, 204, 255);
+    --light-2-val: 22, 204, 255;
+    --light-3: rgb(86, 90, 94);
+    --light-3-val: 86, 90, 94;
+    --light-4: rgb(174, 226, 226);
+    --light-4-val: 174, 226, 226;
+    --light-5: rgb(140, 161, 191);
+    --light-5-val: 140, 161, 191;
+    --light-6: rgb(103, 149, 163);
+    --light-6-val: 233, 159, 176;
+    --text-1: rgb(248, 248, 248);
+    --text-1-val: 248, 248, 248;
 }

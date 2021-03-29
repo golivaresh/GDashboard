@@ -32,19 +32,10 @@ Sidebar Root
 /* Imports */
 /*
 Page Root
-└── body
-    ├── div#containerFluid
-        ├── div#sidebar > styles.sidebar.scss
-        ├── custom
-        ├── demos
-        ├── fonts
-        ├── img
-        ├── variables
-        └── styles.less
-
-    └── components
-        ├── alerts       
-            └── alert.less
+|--- body
+    |--- div#containerFluid
+        |--- div#sidebar > styles.sidebar.scss
+        |--- div#mainContainer.main-container.(m-main-collapsed/m-main-expanded)
 */
 /* ************************************************** */
 /* ************************************************** */
@@ -100,15 +91,15 @@ Page Root
 
 /* ************************************************** */
 /* ScrollBar */
-body::-webkit-scrollbar, div::-webkit-scrollbar {
-  width: 0.5em;
+*::-webkit-scrollbar, div::-webkit-scrollbar {
+  width: 0.4rem;
 }
 
-body::-webkit-scrollbar-track, div::-webkit-scrollbar-track {
+*::-webkit-scrollbar-track, div::-webkit-scrollbar-track {
   box-shadow: inset 0 0 6px var(--primary-4);
 }
 
-body::-webkit-scrollbar-thumb, div::-webkit-scrollbar-thumb {
+*::-webkit-scrollbar-thumb, div::-webkit-scrollbar-thumb {
   background-color: var(--primary-4);
   outline: 1px solid rgba(112, 128, 144, 0.158);
 }
@@ -175,7 +166,7 @@ a:active {
 /* ************************************************** */
 /* ************************************************** */
 /* KeyFrames */
-@keyframes rotate {
+@keyframes animate-rotate {
   from {
     -ms-transform: rotate(0deg);
     /* IE 9 */
@@ -187,8 +178,20 @@ a:active {
     transform: rotate(360deg);
   }
 }
-.rotate {
+.animate-rotate {
   animation: rotate 2s infinite linear;
+}
+
+.rotate-90 {
+  -ms-transform: rotate(90deg);
+  /* IE 9 */
+  transform: rotate(90deg);
+}
+
+.rotate-180 {
+  -ms-transform: rotate(180deg);
+  /* IE 9 */
+  transform: rotate(180deg);
 }
 
 /* ************************************************** */
@@ -259,12 +262,12 @@ nav#sidebar div#sidebarContainer div#sidebarProfile .user-profile .profile-socia
   padding: 10px 0px;
 }
 nav#sidebar div#sidebarContainer div#sidebarProfile .user-profile .profile-social i {
-  color: #f7e779;
+  color: var(--light-5);
 }
 nav#sidebar div#sidebarContainer div#sidebarProfile .user-profile .profile-social i:hover {
   animation: heartBeat;
   animation-duration: 1s;
-  color: #de79f7;
+  color: var(--light-7);
 }
 @media (min-width: 768px) {
   nav#sidebar div#sidebarContainer div#sidebarProfile .user-profile .profile-menu-icon {
@@ -309,7 +312,7 @@ nav#sidebar div#sidebarContainer div#sidebarOpc div#profileItems ul li {
   padding: 0.3rem 1.25rem;
 }
 nav#sidebar div#sidebarContainer div#sidebarOpc div#profileItems ul li.active {
-  background-color: rgba(var(--dark-1-val), 0.27);
+  background-color: rgba(var(--light-1-val), 0.27);
 }
 nav#sidebar div#sidebarContainer div#sidebarOpc div#profileItems ul li:hover {
   animation: shakeX;
@@ -384,6 +387,7 @@ nav#sidebar div#sidebarContainer div#sidebarFooter {
 @media (min-width: 768px) {
   nav#sidebar {
     left: 0;
+    border-right: solid 1px var(--light-4);
   }
   nav#sidebar.m-collapsed {
     width: 70px;
@@ -407,7 +411,7 @@ nav#sidebar div#sidebarContainer div#sidebarFooter {
 
 .m-icon, nav#sidebar div#sidebarContainer div#sidebarProfile .user-profile .profile-menu-icon i, nav#sidebar div#sidebarContainer div#sidebarOpc div#profileItems ul li i, nav#sidebar div#sidebarContainer div#sidebarOpc div#sidebarAccordion .accordion-item .accordion-header:not(.collapsed) .accordion-button i {
   font-size: 1.5rem;
-  color: var(--icon);
+  color: var(--light-4);
 }
 @media (min-width: 768px) {
   .m-icon, nav#sidebar div#sidebarContainer div#sidebarProfile .user-profile .profile-menu-icon i, nav#sidebar div#sidebarContainer div#sidebarOpc div#profileItems ul li i, nav#sidebar div#sidebarContainer div#sidebarOpc div#sidebarAccordion .accordion-item .accordion-header:not(.collapsed) .accordion-button i {

@@ -1,0 +1,39 @@
+/* ************************************************** */
+/*
+Header Root
+|-- header.header
+    |-- h3#btnMenuToggleHeader.btnMenuToggle.btn-menu.(btn-menu-collapsed/"")
+    |-- div
+        |-- div.btn-group{1...n}
+            |-- a.btn.btn-link
+                |--i
+            |-- ul.dropdown-menu
+                |-- li
+                    |-- button.dropdown-item.(active/"") || div.dropdown-item.(active/"")
+                        |---"simple_text" || "other_component"
+*/
+/* ************************************************** */
+/* Imports */
+@import 'styles.scss';
+/* ************************************************** */
+/* ************************************************** */
+/* Header */
+header.header {
+    box-shadow: -1px 0px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -1px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 0px 5px 0px rgba(0,0,0,0.75);
+    z-index: 1;
+    padding: 0.5rem 0.1rem;
+    background-color: var(--background-s-1);
+    @include media( md ) {
+        padding: 1rem 0.5rem;
+    }
+}
+
+.btn-menu {
+    &.btn-menu-collapsed{
+        @extend .rotate-180;
+    }
+    color: var(--primary-3);
+}
+/* ************************************************** */

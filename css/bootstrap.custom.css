@@ -1,0 +1,55 @@
+/* ************************************************** */
+/* Bootstrap Custom */
+/* ************************************************** */
+/* ************************************************** */
+/* Dropdown */
+.btn-link {
+    font-weight: 400;
+    color: var(--primary-3);
+    text-decoration: none;
+}
+.btn-link:hover {
+    font-weight: 400;
+    color: var(--primary-6);
+    text-decoration: none;
+}
+.dropdown-item {
+    -webkit-transition: all 0.1s;
+    -moz-transition: all 0.1s;
+    -ms-transition: all 0.1s;
+    -o-transition: all 0.1s;
+    transition: all 0.1s;
+    cursor: pointer;
+}
+.dropdown-item.active, .dropdown-item:active {
+    color: #fff;
+    text-decoration: none;
+    background-color: rgba(var(--background-s-2-val), 0.97);
+}
+.dropdown-item:focus, .dropdown-item:hover {
+    color: #ffffff;
+    background-color: var(--light-6);
+}
+.dropdown>.dropdown-menu {
+    -webkit-box-shadow: 0px 0px 5px 1px rgba(255,76,76,0.15);
+    -moz-box-shadow: 0px 0px 5px 1px rgba(255,76,76,0.15);
+    box-shadow: 0px 0px 5px 1px rgba(255,76,76,0.15);
+}
+.dropdown>.dropdown-menu.show {
+    overflow: hidden;
+    transform-origin: top center;
+    transform: scale(1, 0);
+}
+
+.icon-theme {
+    /* font-size: 1.2rem; */
+    border: solid 3px var(--primary-5);
+    border-radius: 50%;
+    width: 1.2rem;
+    height: 1.2rem;
+}
+.icon-theme:hover {
+    animation: rubberBand;
+    animation-duration: 1s;
+}
+/* ************************************************** */

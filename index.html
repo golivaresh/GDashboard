@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/hover-min.css">
+    <link rel="stylesheet" href="css/bootstrap.custom.css">
     <link rel="stylesheet" href="css/styles.themes.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/styles.sidebar.css">
@@ -18,7 +19,7 @@
 </head>
 <body>
 
-    <div id="containerFluid" class="container-fluid">
+    <div id="containerFluid" class="">
         <!-- ***************************** -->
         <!-- ********** Sidebar ********** -->
         <nav id="sidebar" class="tr-2 m-collapsed c-pointer">
@@ -131,42 +132,43 @@
         <!-- ***************************** -->
         <!-- *********** Main ************ -->
         <div id="mainContainer" class="main-container m-main-collapsed">
-            <header class="header row m-0"> 
-                <div class="col-1 d-none d-md-inline-block text-center">
-                    <h3 class="m-0">
-                        <div class="btnMenuToggle btn-menu btn-menu-collapsed c-pointer tr-2" id="btnMenuToggleHeader">
-                            <i class="fas fa-bars hvr-wobble-horizontal"></i>
-                        </div>
-                    </h3>
-                </div>
-                <div class="col-12 col-md-11">
-                    <div class="text-end">
-                        <div class="btn-group dropstart dropdown">
-                            <a class="btn btn-link" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="fas fa-cog"></i>
-                            </a>
-                            <ul class="dropdown-menu tr-2" aria-labelledby="dropdownMenu2">
-                                <li><button class="dropdown-item active" type="button">Action</button></li>
-                                <li><button class="dropdown-item" type="button">Another action</button></li>
-                                <li class="pe-2 d-flex flex-wrap justify-content-around c-pointer">
-                                    <p class="w-100 text-center">
-                                        Select Theme
-                                    </p>
-                                    <div onclick="changeTheme('black')" class="icon-theme text-dark bg-dark"></div>
-                                    <div onclick="changeTheme('red')" class="icon-theme text-dark bg-danger"></div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="btn-group dropstart dropdown">
-                            <a class="btn btn-link" type="button" id="dropdownMenu3" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="fas fa-user"></i>
-                            </a>
-                            <ul class="dropdown-menu tr-2" aria-labelledby="dropdownMenu2">
-                                <li><button class="dropdown-item" type="button">Action</button></li>
-                                <li><button class="dropdown-item" type="button">Another action</button></li>
-                                <li><button class="dropdown-item" type="button">Something else here</button></li>
-                            </ul>
-                        </div>
+            <header class="header row m-0">
+                <h3 id="btnMenuToggleHeader" class="btnMenuToggle btn-menu btn-menu-collapsed m-0 col-1 d-none d-md-inline-block text-center c-pointer tr-2">
+                    <i class="fas fa-chevron-circle-right hvr-wobble-horizontal"></i>
+                </h3>
+                <div class="col-12 col-md-11 text-end">
+                    <div class="btn-group dropstart dropdown">
+                        <a class="btn btn-link" type="button" id="dropdownMenu2" data-bs-toggle="" aria-expanded="false">
+                            <i class="fas fa-search"></i>
+                        </a>
+                    </div>
+                    <div class="btn-group dropstart dropdown">
+                        <a class="btn btn-link" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-cog"></i>
+                        </a>
+                        <ul class="dropdown-menu tr-2" aria-labelledby="dropdownMenu2">
+                            <li><button class="dropdown-item active" type="button">Action</button></li>
+                            <li><button class="dropdown-item" type="button">Another action</button></li>
+                            <li>
+                                <div class="dropdown-item">
+                                    Select Theme
+                                    <div class="d-flex flex-wrap justify-content-around">
+                                        <div onclick="changeTheme('black')" class="icon-theme text-dark bg-dark"></div>
+                                        <div onclick="changeTheme('red')" class="icon-theme text-dark bg-danger"></div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="btn-group dropstart dropdown">
+                        <a class="btn btn-link" type="button" id="dropdownMenu3" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-user"></i>
+                        </a>
+                        <ul class="dropdown-menu tr-2" aria-labelledby="dropdownMenu2">
+                            <li><button class="dropdown-item" type="button">Action</button></li>
+                            <li><button class="dropdown-item" type="button">Another action</button></li>
+                            <li><button class="dropdown-item" type="button">Something else here</button></li>
+                        </ul>
                     </div>
                 </div>
             </header>

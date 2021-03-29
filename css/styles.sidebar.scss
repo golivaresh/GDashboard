@@ -95,11 +95,11 @@ nav#sidebar {
                     align-items: center;
                     padding: 10px 0px;
                     i {
-                        color: rgba(247, 231, 121, 1);
+                        color: var(--light-5);
                         &:hover {
                             animation: heartBeat;
                             animation-duration: 1s;
-                            color: rgba(222, 121, 247, 1);
+                            color: var(--light-7);
                         }
                     }
                 }
@@ -154,7 +154,7 @@ nav#sidebar {
                         background-color: rgba(255, 255, 255, 0);
                         padding: 0.3rem 1.25rem;
                         &.active {
-                            background-color: rgba(var(--dark-1-val), 0.27);
+                            background-color: rgba(var(--light-1-val), 0.27);
                         }
                         &:hover {
                             animation: shakeX;
@@ -254,6 +254,7 @@ nav#sidebar {
     }
     @include media( md ) {
         left: 0;
+        border-right: solid 1px var(--light-4);
         &.m-collapsed {
             &:hover {
                 width: 250px;
@@ -279,7 +280,7 @@ nav#sidebar {
 }
 .m-icon {
     font-size: 1.5rem;
-    color: var( --icon );
+    color: var( --light-4 );
     @include media( md ){
         font-size: 1.2rem;
     }

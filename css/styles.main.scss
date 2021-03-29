@@ -1,0 +1,80 @@
+/* ************************************************** */
+/*
+Main Root
+|-- div#mainContainer
+    |--- header.header > styles.header.scss
+    |--- main.main > styles.main.scss
+        |-- div.container-fluid
+        |-- div.container-fluid
+     
+    └── components
+        |--- alerts       
+            └── alert.less
+*/
+/* ************************************************** */
+@media only screen and (min-width: 768px) {
+    .m-main-expanded {
+        margin-left: 250px;
+    }
+    .m-main-collapsed {
+        margin-left: 70px;
+    }
+}
+/* ************************************************** */
+/* Main */
+.main-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+main.main {
+    height: auto;
+    flex-grow: 1;
+    background-color: var(--light-3);
+    color: var(--text-1);
+    padding-top: 5px;
+    overflow: auto;
+}
+
+#btnMenuToggleMain {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 2;
+    width: 2em;
+    height: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px #92072C;
+    border-radius: 50%;
+    margin: 0px;
+    opacity: 0.5;
+    &.btn-menu-expanded {
+        right: -20%;
+    }
+}
+
+
+#btnMenuClose {
+    position: fixed;
+    bottom: 20px;
+    right: -20%;
+    z-index: 3;
+    width: 2em;
+    height: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px #92072C;
+    border-radius: 50%;
+    margin: 0px;
+    background-color: lavender;
+    &.btn-menu-expanded {
+        right: 20px;
+    }
+}
+/* ************************************************** */

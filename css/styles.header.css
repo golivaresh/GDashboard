@@ -1,8 +1,27 @@
+@charset "UTF-8";
 /* ************************************************** */
-/* Root */
-:root {
-
-}
+/*
+Header Root
+|-- header.header
+    |-- h3#btnMenuToggleHeader.btnMenuToggle.btn-menu.(btn-menu-collapsed/"")
+    |-- div
+        |-- div.btn-group{1...n}
+            |-- a.btn.btn-link
+                |--i
+            |-- ul.dropdown-menu
+                |-- li
+                    |-- button.dropdown-item.(active/"") || div.dropdown-item.(active/"")
+                        |---"simple_text" || "other_component"
+*/
+/* ************************************************** */
+/* Imports */
+/*
+Page Root
+|--- body
+    |--- div#containerFluid
+        |--- div#sidebar > styles.sidebar.scss
+        |--- div#mainContainer.main-container.(m-main-collapsed/m-main-expanded)
+*/
 /* ************************************************** */
 /* ************************************************** */
 /* Bootstrap Sizes:
@@ -12,85 +31,175 @@
 .col-lg 	Largo (Large) - Computadoras							Mas de 992px y Menos de 1200px
 .col-xl 	Extra Largo (Extra Large) - Computadoras				Mas de 1200px */
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-    header.header {
-        padding: 0.5rem 0.1rem;
-    }
-}
-
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-}
-
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-    header.header {
-        padding: 1rem 0.5rem;
-    }
-} 
-
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-} 
-
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
+/* ************************************************** */
+/* ************************************************** */
+/* Transitions */
+.tr-1 {
+  -webkit-transition: all 0.1s;
+  -moz-transition: all 0.1s;
+  -ms-transition: all 0.1s;
+  -o-transition: all 0.1s;
+  transition: all 0.1s;
 }
+
+.tr-2 {
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.tr-5 {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.animated-fadeIn-5 {
+  -webkit-animation: fadein 2s;
+  /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s;
+  /* Firefox < 16 */
+  -ms-animation: fadein 2s;
+  /* Internet Explorer */
+  -o-animation: fadein 2s;
+  /* Opera < 12.1 */
+  animation: fadein 2s;
+}
+
+/* ************************************************** */
+/* ScrollBar */
+*::-webkit-scrollbar, div::-webkit-scrollbar {
+  width: 0.4rem;
+}
+
+*::-webkit-scrollbar-track, div::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px var(--primary-4);
+}
+
+*::-webkit-scrollbar-thumb, div::-webkit-scrollbar-thumb {
+  background-color: var(--primary-4);
+  outline: 1px solid rgba(112, 128, 144, 0.158);
+}
+
+/* ************************************************** */
+/* ************************************************** */
+/* Main */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100% !important;
+  height: 100% !important;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  font-family: "Roboto", sans-serif !important;
+}
+
+div#containerFluid {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+/* ************************************************** */
+/* ************************************************** */
+/* Default */
+.size-100 {
+  height: 100%;
+  width: 100%;
+}
+
+.c-pointer {
+  cursor: pointer;
+}
+
+.pm-0 {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: white;
+}
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+  color: white;
+}
+a:active {
+  text-decoration: none;
+}
+
+/* ************************************************** */
+/* ************************************************** */
+/* KeyFrames */
+@keyframes animate-rotate {
+  from {
+    -ms-transform: rotate(0deg);
+    /* IE 9 */
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    /* IE 9 */
+    transform: rotate(360deg);
+  }
+}
+.animate-rotate {
+  animation: rotate 2s infinite linear;
+}
+
+.rotate-90 {
+  -ms-transform: rotate(90deg);
+  /* IE 9 */
+  transform: rotate(90deg);
+}
+
+.rotate-180, .btn-menu.btn-menu-collapsed {
+  -ms-transform: rotate(180deg);
+  /* IE 9 */
+  transform: rotate(180deg);
+}
+
+/* ************************************************** */
 /* ************************************************** */
 /* ************************************************** */
 /* Header */
 header.header {
-    -webkit-box-shadow: 0px 0px 5px 1px rgba(222, 222, 222, 0.15);
-    -moz-box-shadow: 0px 0px 5px 1px rgba(222, 222, 222, 0.15);
-    box-shadow: 0px 0px 5px 1px rgba(222, 222, 222, 0.15);
-    z-index: 1;
+  box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  z-index: 1;
+  padding: 0.5rem 0.1rem;
+  background-color: var(--background-s-1);
 }
-.btn-menu.btn-menu-collapsed {
-    -ms-transform: rotate(90deg); /* IE 9 */
-    transform: rotate(90deg);
-}
-/* ************************************************** */
-/* ************************************************** */
-/* Bootstrap Overides */
-.btn-link {
-    font-weight: 400;
-    color: var(--bg-header-link-red);
-    text-decoration: none;
-}
-.btn-link:hover {
-    font-weight: 400;
-    color: var(--bg-header-link-hover-red);
-    text-decoration: none;
-}
-.dropdown-item.active, .dropdown-item:active {
-    color: #fff;
-    text-decoration: none;
-    background-color: var(--bg-header-opc-active-red);
-}
-.dropdown-item:focus, .dropdown-item:hover {
-    color: #ffffff;
-    background-color: var(--bg-header-opc-hover-red);
-}
-.dropdown>.dropdown-menu {
-    -webkit-box-shadow: 0px 0px 5px 1px rgba(255,76,76,0.15);
-    -moz-box-shadow: 0px 0px 5px 1px rgba(255,76,76,0.15);
-    box-shadow: 0px 0px 5px 1px rgba(255,76,76,0.15);
-}
-.dropdown>.dropdown-menu.show {
-    overflow: hidden;
-    transform-origin: top center;
-    transform: scale(1, 0);
+@media (min-width: 768px) {
+  header.header {
+    padding: 1rem 0.5rem;
+  }
 }
 
-.icon-theme {
-    /* font-size: 1.2rem; */
-    border: solid 3px var(--primary-5);
-    border-radius: 50%;
-    width: 1.2rem;
-    height: 1.2rem;
-}
-.icon-theme:hover {
-    animation: rubberBand;
-    animation-duration: 1s;
+.btn-menu {
+  color: var(--primary-3);
 }
 /* ************************************************** */
+
+/*# sourceMappingURL=styles.header.css.map */
