@@ -206,6 +206,7 @@ div#actionSection {
   display: flex;
   padding: 5px 5px 0px 5px;
   border-top: solid 1px var(--primary-4);
+  display: none;
 }
 div#actionSection div#actionInput {
   display: flex;
