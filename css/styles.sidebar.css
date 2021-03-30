@@ -214,14 +214,16 @@ nav#sidebar.m-collapsed {
 nav#sidebar.m-expanded {
   top: 0;
 }
-nav#sidebar div#sidebarBg {
-  background: url("../img/sidebar-bg-1.jpg");
+@media (min-width: 768px) {
+  nav#sidebar.m-expanded div#sidebarContainer div#sidebarProfile div img#imgProfile {
+    width: 35%;
+  }
 }
 nav#sidebar div#sidebarContainer {
   display: flex;
   flex-direction: column;
   position: absolute;
-  background-color: rgba(var(--background-s-val), 0.9);
+  background-color: rgba(var(--background-s-val), 0.7);
 }
 nav#sidebar div#sidebarContainer div#sidebarProfile {
   padding-top: 10px;
@@ -286,9 +288,6 @@ nav#sidebar div#sidebarContainer div#sidebarProfile .user-profile .profile-socia
   nav#sidebar div#sidebarContainer div#sidebarProfile .user-profile {
     font-size: 1.5em;
     width: 250px;
-  }
-  nav#sidebar div#sidebarContainer div#sidebarProfile div img#imgProfile {
-    width: 35%;
   }
 }
 nav#sidebar div#sidebarContainer div#sidebarOpc {

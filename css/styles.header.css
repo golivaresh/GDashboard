@@ -215,6 +215,22 @@ div#actionSection div#actionInput > div.inactive {
   display: none;
 }
 
+div.bg-s-selector > div {
+  height: 60px;
+  width: 35px;
+  margin: 5px 5px;
+  border-radius: 10%;
+  border: solid 2px var(--primary-5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+div.bg-s-selector > div:hover {
+  animation: tada;
+  animation-duration: 1s;
+  border: solid 2px var(--primary-1);
+}
+
 /* ************************************************** */
 
 /*# sourceMappingURL=styles.header.css.map */

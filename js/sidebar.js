@@ -1,25 +1,6 @@
 /* *************************************************************************************************** */
-let sidebar;
-let mainContainer;
-let btnMenuToggle;
-let sidebarContainer;
-let sidebarFooter;
-let sidebarOpc;
-let sidebarAccordionOpc;
-let sidebarAccordionFlush;
-/* *************************************************************************************************** */
-/* *************************************************************************************************** */
 // Ready
 $( document ).ready( ($) => {
-    mainContainer = $( '#mainContainer' );
-    sidebar = $( '#sidebar' );
-    btnMenuToggle = $( '.btnMenuToggle' );
-    sidebarContainer = $( '#sidebarContainer' );
-    sidebarOpc = $( '#sidebarOpc' );
-    sidebarFooter = $( '#sidebarFooter' );
-    sidebarProfileOpc = $( '#sidebar>#sidebarContainer>#sidebarOpc>#profileItems>ul>li' );
-    sidebarAccordionOpc = $( '#sidebarAccordion>div.accordion-item>[class^="accordion-collapse"]>ul>li' );
-    sidebarAccordionFlush = $('#sidebarAccordion>div.accordion-item>div[id^="flushCollapse"].collapse');
     if ( !isSmallScreen() ) {
         toggleMenu();
     }
@@ -43,13 +24,10 @@ $( document ).ready( ($) => {
             //     expandedIfActive();
             //     console.log('expandedIfActive');
             // }
-            console.log('hover on');
         }, () => {
             if ( !sidebar.hasClass('m-expanded') ) {
                 hideAccordion();
-                console.log('hideAccordion');
             }
-            console.log('hover off');
         }
     );
     /* *************************************************************************************************** */

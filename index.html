@@ -22,15 +22,14 @@
     <div id="containerFluid" class="">
         <!-- ***************************** -->
         <!-- ********** Sidebar ********** -->
-        <nav id="sidebar" class="tr-2 m-collapsed c-pointer">
-            <div id="sidebarBg" class="size-100"></div>
+        <nav id="sidebar" class="tr-1 m-collapsed c-pointer">
+            <div id="sidebarBg" class="size-100 imgActive tr-2" style="background-repeat: no-repeat;background-position: center;background-size: cover;"></div>
             <div id="sidebarContainer" class="size-100">
                 <div id="sidebarProfile" class="">
                     <div class="w-100 text-center mb-2">
                         <img id="imgProfile" class="bg-gradient tr-1" src="./img/logo-1.png" alt="">
                     </div>
                     <div id="" class="user-profile">
-                        <!-- <img id="sidebarLogo" class="bg-gradient" src="./img/logo-1.png" alt=""> -->
                         <div id="" class="profile-menu-icon">
                             <i class="fas fa-laptop-code"></i>
                         </div>
@@ -39,7 +38,6 @@
                         </div>
                     </div>
                     <div id="" class="user-profile">
-                        <!-- <img id="sidebarLogo" class="bg-gradient" src="./img/logo-1.png" alt=""> -->
                         <div id="" class="profile-menu-icon">
                             <i class="fas fa-comment-alt"></i>
                         </div>
@@ -51,14 +49,6 @@
                             <i class="fab fa-gitlab"></i>
                         </div>
                     </div>
-                    <!-- <div id="profileItems" class="">
-                        <ul>
-                            <li class=""><i class="fas fa-home"></i> Home</li>
-                            <li class="active"><i class="fas fa-user-circle"></i> My profile</li>
-                            <li class=""><i class="far fa-address-card"></i> About Me</li>
-                            <li class=""><i class="fas fa-cogs"></i> About this site</li>
-                        </ul>
-                    </div> -->
                 </div>
                 <div id="sidebarOpc" class="m-opc m-opc-collapsed pt-1">
                     <div id="profileItems" class="">
@@ -66,7 +56,7 @@
                             <li class=""><i class="fas fa-home"></i>Home</li>
                             <li class="active"><i class="fas fa-user-circle"></i>My profile</li>
                             <li class=""><i class="far fa-address-card"></i>About Me</li>
-                            <li class=""><i class="fas fa-cogs"></i>About this site</li>
+                            <li class=""><i class="fas fa-code"></i>About this site</li>
                         </ul>
                     </div>
                     <!-- ********** Accordion ********** -->
@@ -85,7 +75,7 @@
                               </ul>
                           </div>
                         </div>
-                        <div class="accordion-item">
+                        <div class="accordion-item active">
                           <h2 class="accordion-header active" id="flush-heading2">
                             <div class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flushCollapse_2" aria-expanded="false" aria-controls="flushCollapse_2">
                               <i class="m-opc-icon fab fa-wpforms"></i>
@@ -131,33 +121,63 @@
         <!-- ***************************** -->
         <!-- ***************************** -->
         <!-- *********** Main ************ -->
-        <div id="mainContainer" class="main-container m-main-collapsed">
+        <div id="mainContainer" class="main-container m-main-collapsed tr-1">
             <header class="header row m-0 tr-2">
                 <h3 id="btnMenuToggleHeader" class="btnMenuToggle btn-menu btn-menu-collapsed m-0 col-1 d-none d-md-inline-block text-center c-pointer tr-2">
-                    <i class="fas fa-chevron-circle-right hvr-wobble-horizontal"></i>
+                    <i class="fas fa-chevron-circle-left hvr-wobble-horizontal"></i>
                 </h3>
                 <div class="col-12 col-md-11 text-end">
-                    <div class="btn-group dropstart dropdown">
+                    <div class="btn-group dropdown">
                         <a id="btnCloseActionSection" class="btn btn-link" onclick="toggleActionSection();" type="button" id="dropdownMenu2" data-bs-toggle="" aria-expanded="false">
                             <i class="far fa-times-circle"></i>
                         </a>
                     </div>
-                    <div class="btn-group dropstart dropdown">
-                        <a class="btn btn-link" onclick="toggleActionSection('txtGlobalSearch');" type="button" id="dropdownMenu2" data-bs-toggle="" aria-expanded="false">
+                    <div class="btn-group dropdown">
+                        <a class="btn btn-link" onclick="toggleActionSection('divGlobalSearch');" type="button" id="dropdownMenu2" data-bs-toggle="" aria-expanded="false">
                             <i class="fas fa-search"></i>
                         </a>
                     </div>
-                    <div class="btn-group dropstart dropdown">
+                    <div class="btn-group dropdown">
                         <a class="btn btn-link" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="fas fa-cog"></i>
                         </a>
-                        <ul class="dropdown-menu tr-2" aria-labelledby="dropdownMenu2">
+                        <ul class="dropdown-menu tr-2" aria-labelledby="dropdownConfig">
+                            <h6 class="dropdown-header text-center">Configuration</h6>
                             <li><button class="dropdown-item active" type="button">Action</button></li>
                             <li><button class="dropdown-item" type="button">Another action</button></li>
+                            <div class="dropdown-divider"></div>
+                            <h6 class="dropdown-header text-center">Sidebar</h6>
                             <li>
                                 <div class="dropdown-item">
-                                    Select Theme
-                                    <div class="d-flex flex-wrap justify-content-around">
+                                    Background image
+                                    <div class="d-flex flex-wrap justify-content-around mt-2">
+                                        <div class="bg-s-selector w-100 d-flex">
+                                            <div class="overflow-hidden">
+                                                <img onclick="changeSidebarBg( 'https://img1.picmix.com/output/stamp/normal/4/5/8/2/272854_c575d.gif' );" src="https://img1.picmix.com/output/stamp/normal/4/5/8/2/272854_c575d.gif" height="100%" alt="">
+                                            </div>
+                                            <div class="overflow-hidden">
+                                                <img onclick="changeSidebarBg( 'https://cdn4.vectorstock.com/i/1000x1000/33/83/white-abstract-background-with-electronics-vector-22953383.jpg' );" src="https://cdn4.vectorstock.com/i/1000x1000/33/83/white-abstract-background-with-electronics-vector-22953383.jpg" height="100%" alt="">
+                                            </div>
+                                            <div class="overflow-hidden">
+                                                <img onclick="changeSidebarBg( 'https://lh3.googleusercontent.com/proxy/Uj0WasVDyNa278TPyUTBnlZfuusWMmMw85oAk3NIJ-2I47CR-nkb-Wxjz59qF_XY8JbQjAf4Srh6LblHBT8uxp8wR6VdV3mea2e5Eeju9BwpLrGbLu7gpLB2-wh6x39WvXfmCHgoYP0M-CrYa2NtrQ' );" src="https://lh3.googleusercontent.com/proxy/Uj0WasVDyNa278TPyUTBnlZfuusWMmMw85oAk3NIJ-2I47CR-nkb-Wxjz59qF_XY8JbQjAf4Srh6LblHBT8uxp8wR6VdV3mea2e5Eeju9BwpLrGbLu7gpLB2-wh6x39WvXfmCHgoYP0M-CrYa2NtrQ" height="100%" alt="">
+                                            </div>
+                                            <div class="overflow-hidden">
+                                                <img onclick="changeSidebarBg( 'https://images.ctfassets.net/yr4qj72ki4ky/6G2JeQnM8bsnjgoJBjljCh/f30782e127727ee309ebf87fb59cf446/best-programming-languages-2020-Hero.jpg?q=72' );" src="https://images.ctfassets.net/yr4qj72ki4ky/6G2JeQnM8bsnjgoJBjljCh/f30782e127727ee309ebf87fb59cf446/best-programming-languages-2020-Hero.jpg?q=72" height="100%" alt="">
+                                            </div>
+                                            <div class="overflow-hidden">
+                                                <img onclick="changeSidebarBg( 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Animated_Wallpaper_Windows_10_-_Wallpaper_Engine.gif/440px-Animated_Wallpaper_Windows_10_-_Wallpaper_Engine.gif' );" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Animated_Wallpaper_Windows_10_-_Wallpaper_Engine.gif/440px-Animated_Wallpaper_Windows_10_-_Wallpaper_Engine.gif" height="100%" alt="">
+                                            </div>
+                                            <div class="overflow-hidden">
+                                                <img onclick="changeSidebarBg( '' );" src="./img/no-image.jpg" height="100%" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="dropdown-item">
+                                    Theme
+                                    <div class="d-flex flex-wrap justify-content-around mt-2">
                                         <div onclick="changeTheme('black')" class="icon-theme text-dark bg-dark"></div>
                                         <div onclick="changeTheme('red')" class="icon-theme text-dark bg-danger"></div>
                                     </div>
@@ -165,35 +185,31 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="btn-group dropstart dropdown">
+                    <div class="btn-group dropdown">
                         <a class="btn btn-link" type="button" id="dropdownMenu3" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="fas fa-user"></i>
                         </a>
-                        <ul class="dropdown-menu tr-2" aria-labelledby="dropdownMenu2">
-                            <li><button class="dropdown-item" type="button">Action</button></li>
-                            <li><button class="dropdown-item" type="button">Another action</button></li>
-                            <li><button class="dropdown-item" type="button">Something else here</button></li>
+                        <ul class="dropdown-menu tr-2" aria-labelledby="dropdownUser">
+                            <h6 class="dropdown-header">User</h6>
+                            <li><button class="dropdown-item" type="button"><i class="fas fa-user-alt"></i> Profile</button></li>
+                            <li><button class="dropdown-item" type="button"><i class="fas fa-sign-out-alt"></i> Sign Out</button></li>
                         </ul>
                     </div>
                 </div>
                 <div id="actionSection" class="container-fluid w-100 mt-1">
                     <div id="actionInput" class="flex-grow-1 d-flex">
-                        <div id="txtGlobalSearch" class="d-flex w-100">
+                        <div id="divGlobalSearch" class="d-flex w-100">
                             <div class="flex-grow-1">
-                                <input type="text" class="form-control" placeholder="global search" aria-describedby="global search">
+                                <input id="txtGlobalSearch" type="text" class="form-control" placeholder="global search" aria-describedby="global search">
                                 <div id="emailHelp" class="form-text">Press enter to search.</div>
                             </div>
                             <div class="flex-grow-0 d-flex justify-content-center align-items-start p-0 m-0 ms-1 h-100 c-pointer h3">
-                                <button class="btn btn-outline-secondary" type="button">
+                                <button onclick="cleanElement('txtGlobalSearch');" class="btn btn-outline-secondary" type="button">
                                     <i class="fas fa-backspace"></i>
                                 </button>
                             </div>
                         </div>
                     </div>
-                    <!-- <div onclick="toggleActionSection();" 
-                         class="flex-grow-0 d-flex justify-content-center align-items-center p-0 m-0 ms-1 c-pointer h3">
-                        <i class="far fa-times-circle"></i>
-                    </div> -->
                 </div>
             </header>
             <main class="main">

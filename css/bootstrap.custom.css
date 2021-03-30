@@ -20,6 +20,7 @@
     -o-transition: all 0.1s;
     transition: all 0.1s;
     cursor: pointer;
+    color: rgb(102, 98, 98);
 }
 .dropdown-item.active, .dropdown-item:active {
     color: #fff;
@@ -52,4 +53,9 @@
     animation: rubberBand;
     animation-duration: 1s;
 }
+
+.accordion-item.active {
+    background-color: rgba(var(--light-1-val), 0.27);
+}
+
 /* ************************************************** */

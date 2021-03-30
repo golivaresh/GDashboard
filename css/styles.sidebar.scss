@@ -46,15 +46,21 @@ nav#sidebar {
     }
     &.m-expanded {
         top: 0;
-    }
-    div#sidebarBg {
-        background: url("../img/sidebar-bg-1.jpg");
+        div#sidebarContainer {
+            div#sidebarProfile {
+                @include media( md ) {
+                    div img#imgProfile {
+                        width: 35%;
+                    }
+                }
+            }
+        }
     }
     div#sidebarContainer {
         display: flex;
         flex-direction: column;
         position: absolute;
-        background-color: rgba( var(--background-s-val), 0.9);
+        background-color: rgba( var(--background-s-val), 0.7);
         div#sidebarProfile {
             @extend .m-border-b;
             padding-top: 10px;
@@ -122,9 +128,9 @@ nav#sidebar {
                     font-size: 1.5em;
                     width: 250px;
                 }
-                div img#imgProfile {
-                    width: 35%;
-                }
+                // div img#imgProfile {
+                //     width: 35%;
+                // }
             }
         }
         div#sidebarOpc {
