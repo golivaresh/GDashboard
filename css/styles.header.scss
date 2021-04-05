@@ -72,4 +72,40 @@ div.bg-s-selector {
         }
     }
 }
+
+.icon-border {
+    border-radius: 10%;
+    border: solid 2px var(--primary-5);
+}
+.icon-border-hv {
+    animation: tada;
+    animation-duration: 1s;
+    border: solid 2px var(--primary-1);
+}
+
+.icon-hv {
+    animation: rubberBand;
+    animation-duration: 1s;
+}
+
+.icon-theme {
+    /* font-size: 1.2rem; */
+    @extend .icon-border;
+    border-radius: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
+    &:hover {
+        @extend .icon-hv;
+        @extend .icon-border-hv;
+    }
+}
+
+.icon-lang {
+    width: 2rem;
+    @extend .icon-border;
+    &:hover {
+        @extend .icon-hv;
+        @extend .icon-border-hv;
+    }
+}
 /* ************************************************** */

@@ -232,6 +232,31 @@ div.bg-s-selector > div:hover {
   border: solid 2px var(--primary-1);
 }
 
+.icon-border, .icon-lang, .icon-theme {
+  border-radius: 10%;
+  border: solid 2px var(--primary-5);
+}
+
+.icon-border-hv, .icon-lang:hover, .icon-theme:hover {
+  animation: tada;
+  animation-duration: 1s;
+  border: solid 2px var(--primary-1);
+}
+
+.icon-hv, .icon-lang:hover, .icon-theme:hover {
+  animation: rubberBand;
+  animation-duration: 1s;
+}
+
+.icon-theme {
+  /* font-size: 1.2rem; */
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.icon-lang {
+  width: 2rem;
+}
 /* ************************************************** */
 
 /*# sourceMappingURL=styles.header.css.map */

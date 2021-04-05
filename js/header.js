@@ -38,7 +38,7 @@ const cleanElement = ( inputId, defaultValue ) => {
 const changeSidebarBg = ( img ) => {
     console.log((img === null || img === undefined) ? img : 'vacio');
     localStorage.setItem( 'sidebarImgUrl', (img) ? img : '' );
-    CSS_SIDEBAR_BG.background = `url(${ ((img) ? img : './img/no-image-bg.jpg') })`;
+    CSS_SIDEBAR_BG.background = `url(${ ((img) ? img : './img/sidebar/no-image-bg.jpg') })`;
     
     sidebarBg.css(CSS_SIDEBAR_BG);
 };
