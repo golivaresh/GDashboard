@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/logo-goh/goh-logo-letter-light-transparent.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/lib/animate.min.css" />
+    <link rel="stylesheet" href="css/lib/bootstrap.min.css">
+    <link rel="stylesheet" href="css/lib/hover-min.css">
+    <link rel="stylesheet" href="css/bootstrap.custom.css">
+    <link rel="stylesheet" href="css/styles.themes.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Error Page</title>
+</head>
+<body>
+    <div id="bgMainLogin" class="container-fluid w-100 h-100">
+    </div>
+    <div id="mainLogin" class="container-fluid w-100 h-100 d-flex justify-content-center justify-content-md-start align-items-center">
+        <div id="divLogin" class="flex-grow-0 d-flex flex-column">
+            <div class="flex-grow-0 p-2 border-bottom" style="height: 100px;">
+                <img src="./img/logo-goh/goh-logo-letter-dark-transparent.png" alt="" class="d-none d-sm-block" style="width: 100px;">
+                <img src="./img/logo-goh/goh-logo-letter-light-transparent.png" alt="" class="d-block d-sm-none" style="width: 100px;">
+            </div>
+            <div class="flex-grow-1 overflow-hidden" style="background-color: crimson;">
+                <div id="divFormLogin" class="show tr-1 w-100 h-100 d-flex align-items-center">
+                    <form action="#" class="">
+                        <legend class="text-white">Login</legend>
+                        <hr class="text-white mb-1">
+                        <div class="mb-2 text-center text-md-start">
+                            <label for="txtUsername" class="form-label text-white">Username</label>
+                            <input type="text" class="form-control" id="txtUsername" aria-describedby="Username" placeholder="username">
+                            <div id="usernameHelp" class="form-text text-danger">You must capture your username.</div>
+                        </div>
+                        <div class="mb-2 text-center text-md-start">
+                            <label for="txtPassword" class="form-label text-white">Password</label>
+                            <input type="password" class="form-control" id="txtPassword" aria-describedby="Password" placeholder="**********">
+                            <div id="passwordHelp" class="form-text text-danger">Your secret password.</div>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label text-white" for="exampleCheck1">Remember me</label>
+                          </div>
+                        <div class="text-center text-md-start">
+                            <button type="button" class="btn btn-light w-auto">Login</button>
+                        </div>
+                        <div class="text-end text-light c-pointer">
+                            <a href="" class="btn-toggle-login" >You do not have an account?</a>
+                            <!-- <a href="">You have an account?</a> -->
+                        </div>
+                    </form>
+                    <!-- <div class=" w-100 text-start m-0 h2 text-danger flex-shrink-1">
+                        Welcome
+                    </div> -->
+                </div>
+                <div id="divFormSignIn" class="tr-1 w-100 h-100 d-flex align-items-center">
+                    <form action="#" class="row">
+                        <legend class="text-white col-12">Sign In</legend>
+                        <hr class="text-white mb-1">
+                        <div class="col-12 col-lg-6">
+                            <label for="txtFirstName" class="form-label text-white">First name</label>
+                            <input type="text" class="form-control" id="txtFirstName" value="" required>
+                            <div id="firstNameHelp" class="form-text text-danger">You must capture your First Name.</div>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <label for="txtLastName" class="form-label text-white">Last name</label>
+                            <input type="text" class="form-control" id="txtLastName" value="" required>
+                            <div id="lastNameHelp" class="form-text text-danger">You must capture your Last Name.</div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="txtUsername" class="form-label text-white">Username</label>
+                            <div class="input-group has-validation">
+                              <span class="input-group-text" id="txtUsername">@</span>
+                              <input type="text" class="form-control" id="txtUsername" aria-describedby="txtUsername" required>
+                              <div id="usernameHelp" class="form-text text-danger">You must capture your Username.</div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-6">
+                            <label for="txtPassword" class="form-label text-white">Password</label>
+                            <input type="password" class="form-control" id="txtPassword" value="" required>
+                            <div id="passwordHelp" class="form-text text-danger">Capture your valid password.</div>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <label for="txtPasswordConfirm" class="form-label text-white">Confirm password</label>
+                            <input type="password" class="form-control" id="txtPasswordConfirm" value="" required>
+                            <div id="passwordConfirmHelp" class="form-text text-danger">Confirm your password.</div>
+                        </div>
+
+                        
+                        
+                        <!-- <div class="mb-2 text-center text-md-start">
+                            <label for="txtUsername" class="form-label text-white">Username</label>
+                            <input type="text" class="form-control" id="txtUsername" aria-describedby="Username" placeholder="username">
+                            <div id="usernameHelp" class="form-text text-danger">You must capture your username.</div>
+                        </div>
+                        <div class="mb-2 text-center text-md-start">
+                            <label for="txtEmail" class="form-label text-white">Email</label>
+                            <input type="text" class="form-control" id="txtEmail" aria-describedby="Email" placeholder="example@domain.com">
+                            <div id="emailHelp" class="form-text text-danger">You must capture your email.</div>
+                        </div>
+                        <div class="mb-2 text-center text-md-start">
+                            <label for="txtPassword" class="form-label text-white">Password</label>
+                            <input type="password" class="form-control" id="txtPassword" aria-describedby="Password" placeholder="**********">
+                            <div id="passwordHelp" class="form-text text-danger">Your secret password.</div>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label text-white" for="exampleCheck1">Remember me</label>
+                        </div> -->
+                        <div class="text-center text-md-start">
+                            <button type="button" class="btn btn-light w-auto">Login</button>
+                        </div>
+                        <div class="text-end text-light c-pointer">
+                            <a href="" class="btn-toggle-login">You have an account?</a>
+                        </div>
+                    </form>
+                    <!-- <div class=" w-100 text-start m-0 h2 text-danger flex-shrink-1">
+                        Welcome
+                    </div> -->
+                </div>
+            </div>            
+        </div>
+        <div id="" class="bg-login-right h-100 flex-grow-1">ads</div>
+    </div>
+    <!-- <div id="mainLogin" class="container-fluid w-100 h-100 d-flex align-items-center">
+        <div id="divLogin" class="bg-info">
+            <form action="#" class="">
+                <div class="mb-2">
+                    <label for="txtEmail" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="txtEmail" aria-describedby="Email" placeholder="email@example.com">
+                    <div id="emailHelp" class="form-text">You must capture your email.</div>
+                </div>
+                <div class="mb-2">
+                    <label for="txtUsername" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="txtUsername" aria-describedby="Username" placeholder="username">
+                    <div id="usernameHelp" class="form-text">You must capture your email.</div>
+                </div>
+                <div class="mb-2">
+                    <label for="txtPassword" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="txtPassword" aria-describedby="Password" placeholder="*****">
+                    <div id="passwordHelp" class="form-text">Create a strong password.</div>
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Remember me</label>
+                  </div>
+                <button type="submit" class="btn btn-primary"></button>
+            </form>
+        </div>
+    </div> -->
+
+    <!-- Scripts -->
+    <script src="js/lib/jquery-3.6.0.min.js"></script>
+    <script src="js/lib/popper.min.js"></script>
+    <script src="js/lib/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/header.js"></script>
+    <script src="https://kit.fontawesome.com/5b10166cb2.js" crossorigin="anonymous"></script>
+</body>
+</html>

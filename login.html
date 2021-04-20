@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/logo-goh/goh-logo-letter-light-transparent.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/lib/animate.min.css" />
+    <link rel="stylesheet" href="css/lib/bootstrap.min.css">
+    <link rel="stylesheet" href="css/lib/hover-min.css">
+    <link rel="stylesheet" href="css/bootstrap.custom.css">
+    <link rel="stylesheet" href="css/styles.themes.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Login</title>
+</head>
+<body class="container-fluid">
+    <div class="row h-100 p-0 m-0">
+        <div id="mainLogin" class="col-12 col-sm-6 col-md-4 col-xl-3 h-100 d-flex flex-column p-0 m-0">
+            <div class="flex-grow-0 bg-form-login text-center py-2">
+                <img src="./img/logo-goh/goh-logo-b-transparent-light.png" alt="" class="w-75-px">
+            </div>
+            <div class="bg-form-login flex-grow-1 d-flex px-3 align-items-center justify-content-center" >
+                <form action="#" class="col-12 col-lg-11">
+                    <legend class="text-dark"><h2>Login to your account</h2></legend>
+                    <hr class="text-dark mb-3">
+                    <div class="mb-2 text-center text-md-start">
+                        <label for="txtUsername" class="form-label text-dark">
+                            Username
+                            <i class="fas fa-info-circle text-muted" 
+                                data-bs-toggle="popover" data-bs-trigger="hover focus" 
+                                data-bs-content="Enter your username that you used to register."></i>
+                        </label>
+                        <input type="text" class="form-control" id="txtUsername" aria-describedby="Username" placeholder="username">
+                        <div id="usernameHelp" class="form-text text-danger d-none">You must capture your username.</div>
+                    </div>
+                    <div class="mb-2 text-center text-md-start">
+                        <label for="txtPassword" class="form-label text-dark">
+                            Password
+                            <i class="fas fa-info-circle text-muted" 
+                                data-bs-toggle="popover" data-bs-trigger="hover focus" 
+                                data-bs-content="Enter your super, secret password."></i>
+                        </label>
+                        
+                        <input type="password" class="form-control" id="txtPassword" aria-describedby="Password" placeholder="**********">
+                        <div id="passwordHelp" class="form-text text-danger d-none">You must capture your secret password.</div>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label text-dark" for="exampleCheck1">Remember me</label>
+                      </div>
+                    <div class="text-center text-md-start">
+                        <button type="button" class="btn btn-dark w-auto">Login</button>
+                    </div>
+                    <div class="text-start mt-2 c-pointer">
+                        Don't have an account?
+                        <a href="signUp.html" class="text-success btn-toggle-login">Sign Up</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="bgMainLogin" class="d-none d-sm-flex flex-sm-column justify-content-end col-sm-6 col-md-8 col-xl-9 h-100 p-0 m-0">
+            <div class="p-2 text-end">
+                <!-- <img src="./img/logo-goh/goh-logo-letter-dark-transparent.png" alt="" class="w-100-px d-none d-md-block">
+                <img src="./img/logo-goh/goh-logo-letter-light-transparent.png" alt="" class="w-100-px d-block d-md-none"> -->
+                <h1 class="text-white-50 m-0">
+                    Welcome
+                </h1>
+                <div class="text-end text-white-50">
+                    <div class="copyright pull-right"> 
+                        ©2021 goh
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div id="" class="d-none d-sm-block col-sm-6 col-md-8 col-xl-9 h-100 p-0 m-0 d-flex bg-danger">
+            <div class="bg-primary h-100">
+                asdfsa
+            </div>
+        </div> -->
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/lib/jquery-3.6.0.min.js"></script>
+    <script src="js/lib/popper.min.js"></script>
+    <script src="js/lib/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/header.js"></script>
+    <script src="https://kit.fontawesome.com/5b10166cb2.js" crossorigin="anonymous"></script>
+</body>
+</html>

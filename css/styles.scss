@@ -96,13 +96,16 @@ $breakpoint-lx: 1200px;
     margin:0;
     padding:0;
 }
+.roboto-font {
+    font-family: 'Roboto', sans-serif!important;
+}
 body {
     width: 100%!important;
     height: 100%!important;
     position: absolute;
     top: 0;
     bottom: 0;
-    font-family: 'Roboto', sans-serif!important;
+    @extend .roboto-font;
 }
 
 div#containerFluid {
@@ -121,6 +124,26 @@ div#containerFluid {
     width: 100%;
 }
 
+.h-100-px {
+  height: 100px;
+  max-height: 100px;
+}
+.w-100-px {
+  width: 100px;
+  max-width: 100px;
+}
+.w-75-px {
+  width: 75px;
+  max-width: 75px;
+}
+.w-50-px {
+  width: 50px;
+  max-width: 50px;
+}
+.w-25-px {
+  width: 25px;
+  max-width: 25px;
+}
 .c-pointer {
     cursor: pointer;
 }
@@ -150,6 +173,113 @@ a {
     }
 }
 
+.page-error {
+    background-color: var(--primary-1);
+    color: var(--text-1);
+    & .title-error {
+        font-size: 5em;
+        &:hover {
+            animation: swing;
+            animation-duration: 1s;
+        }
+        @include media( md ) {
+            font-size: 15em;
+        }
+        @include media( sm ) {
+            font-size: 10em;
+        }
+    }
+}
+.body-error {
+    color: rgba(var(--light-6-val), 0.6);
+    &>h6:hover {
+        color: rgba(var(--light-6-val), 1);
+        animation: shakeX;
+        animation-duration: 2s;
+    }
+}
+
+
+/* ************************************************** */
+// Error page
+.glitch-container {
+    letter-spacing: 8px;
+    // font-family: 'Press Start 2P';
+    margin: 0;
+    line-height: 0;
+}
+.glitch-text:nth-child(1) {
+    color: rgb(209, 209, 209);
+    animation: glitch1 2.5s infinite;
+}
+
+.glitch-text:nth-child(2) {
+    color: #67f3da;
+    animation: glitch2 2.5s infinite;
+}
+.glitch-text:nth-child(3) {
+    color: #f16f6f;
+    animation: glitch3 2.5s infinite;
+}
+/* ************************************************** */
+// Login
+#bgMainLogin {
+  background-image: url(../img/login_wallpaper.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-form-login {
+  background-color: rgb(239 239 239);
+}
+
+#mainLogin {
+  overflow-y: auto;
+  overflow-x: none;
+  border-image-source: linear-gradient(10deg, #fe01f5 0%, #2e113d 100%);
+  // background-color: rgba(0, 0, 0, 0.30);
+  // padding: 0px;
+  // div.bg-login-right {
+  //   display: none;
+  //   @include media( sm ) {
+  //     display: inline-block;
+  //   }
+  // }
+}
+
+#divLogin {
+  // width: 100%;
+  height: 100%;
+  background-color: rgb(255, 255, 255, 0.1);
+  & form {
+    width: 100%;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    margin: 10px;
+  }
+  // @include media( sm ) {
+  //   width: 60%;
+  //   background-color: rgb(255, 255, 255);
+  //   // &.show-sign-in {
+  //   //   width: 70%;
+  //   // }
+  // }
+  @include media( md ) {
+    // width: 40%;
+    // background-color: rgb(255, 255, 255);
+    // &.show-sign-in {
+    //   width: 55%;
+    // }
+  }
+  @include media( lg ) {
+    // width: 35%;
+    // &.show-sign-in {
+    //   width: 50%;
+    // }
+  }
+}
 /* ************************************************** */
 /* ************************************************** */
 /* KeyFrames */
@@ -164,7 +294,7 @@ a {
     }
 }
 .animate-rotate {
-    animation: rotate 2s infinite linear;
+    animation: animate-rotate 2s infinite linear;
 }
 .rotate-90 {
     -ms-transform: rotate(90deg); /* IE 9 */
@@ -174,4 +304,171 @@ a {
     -ms-transform: rotate(180deg); /* IE 9 */
     transform: rotate(180deg);
 }
+
+// Start Glitch
+@keyframes glitch1 {
+    0% {
+      transform: none;
+      opacity: 1;
+    }
+    7% {
+      transform: skew(-0.5deg, -0.9deg);
+      opacity: 0.75;
+    }
+    10% {
+      transform: none;
+      opacity: 1;
+    }
+    27% {
+      transform: none;
+      opacity: 1;
+    }
+    30% {
+      transform: skew(0.8deg, -0.1deg);
+      opacity: 0.75;
+    }
+    35% {
+      transform: none;
+      opacity: 1;
+    }
+    52% {
+      transform: none;
+      opacity: 1;
+    }
+    55% {
+      transform: skew(-1deg, 0.2deg);
+      opacity: 0.75;
+    }
+    50% {
+      transform: none;
+      opacity: 1;
+    }
+    72% {
+      transform: none;
+      opacity: 1;
+    }
+    75% {
+      transform: skew(0.4deg, 1deg);
+      opacity: 0.75;
+    }
+    80% {
+      transform: none;
+      opacity: 1;
+    }
+    100% {
+      transform: none;
+      opacity: 1;
+    }
+}
+  
+@keyframes glitch2 {
+    0% {
+      transform: none;
+      opacity: 0.25;
+    }
+    7% {
+      transform: translate(-2px, -3px);
+      opacity: 0.5;
+    }
+    10% {
+      transform: none;
+      opacity: 0.25;
+    }
+    27% {
+      transform: none;
+      opacity: 0.25;
+    }
+    30% {
+      transform: translate(-5px, -2px);
+      opacity: 0.5;
+    }
+    35% {
+      transform: none;
+      opacity: 0.25;
+    }
+    52% {
+      transform: none;
+      opacity: 0.25;
+    }
+    55% {
+      transform: translate(-5px, -1px);
+      opacity: 0.5;
+    }
+    50% {
+      transform: none;
+      opacity: 0.25;
+    }
+    72% {
+      transform: none;
+      opacity: 0.25;
+    }
+    75% {
+      transform: translate(-2px, -6px);
+      opacity: 0.5;
+    }
+    80% {
+      transform: none;
+      opacity: 0.25;
+    }
+    100% {
+      transform: none;
+      opacity: 0.25;
+    }
+}
+  
+@keyframes glitch3 {
+    0% {
+      transform: none;
+      opacity: 0.25;
+    }
+    7% {
+      transform: translate(2px, 3px);
+      opacity: 0.5;
+    }
+    10% {
+      transform: none;
+      opacity: 0.25;
+    }
+    27% {
+      transform: none;
+      opacity: 0.25;
+    }
+    30% {
+      transform: translate(5px, 2px);
+      opacity: 0.5;
+    }
+    35% {
+      transform: none;
+      opacity: 0.25;
+    }
+    52% {
+      transform: none;
+      opacity: 0.25;
+    }
+    55% {
+      transform: translate(5px, 1px);
+      opacity: 0.5;
+    }
+    50% {
+      transform: none;
+      opacity: 0.25;
+    }
+    72% {
+      transform: none;
+      opacity: 0.25;
+    }
+    75% {
+      transform: translate(2px, 6px);
+      opacity: 0.5;
+    }
+    80% {
+      transform: none;
+      opacity: 0.25;
+    }
+    100% {
+      transform: none;
+      opacity: 0.25;
+    }
+}
+// End Glitch
 /* ************************************************** */

@@ -49,10 +49,12 @@ main.main {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: solid 1px #92072C;
+    border: solid 1px var(--primary-1);
     border-radius: 50%;
     margin: 0px;
-    opacity: 0.5;
+    opacity: 1;
+    background-color: rgba(var(--primary-2-val), 0.5);
+    color: whitesmoke;
     &.btn-menu-expanded {
         right: -20%;
     }

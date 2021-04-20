@@ -14,6 +14,11 @@ let sidebarAccordionFlush;
 let actionSection;
 let actionSectionElements;
 let btnCloseActionSection;
+// Login
+// let divLogin;
+// let divFormLogin;
+// let divFormSignIn;
+// let btnToggleLoginDiv;
 /* *************************************************************************************************** */
 /* *************************************************************************************************** */
 // Ready
@@ -33,9 +38,21 @@ $(document).ready(function () {
     actionSection = $('#actionSection');
     btnCloseActionSection = $('#btnCloseActionSection');
     actionSectionElements = $('#actionSection>div#actionInput>div');
+    // Login
+    // divLogin = $('#divLogin');
+    // divFormLogin = $('#divFormLogin');
+    // divFormSignIn = $('#divFormSignIn');
+    // btnToggleLoginDiv = $('.btn-toggle-login');
 
     saveResizeElements();
     changeTheme( localStorage.getItem( 'g-theme' ) );
+
+    // btnToggleLoginDiv.click(function (e) { 
+    //     divFormLogin.toggleClass( 'show' );
+    //     divFormSignIn.toggleClass( 'show' );
+    //     divLogin.toggleClass( 'show-sign-in' );
+    //     e.preventDefault();
+    // });
 });
 /* *************************************************************************************************** */
 /* *************************************************************************************************** */
@@ -48,6 +65,7 @@ function saveResizeElements() {
     $(':root').css('--window-height-px', ( $( window ).height() + 'px') );
     $(':root').css('--window-width', $(window).width() );
     $(':root').css('--window-width-px', ( $(window).width() + 'px') );
+    // $(':root').css('--div-login-height-px', ( '-' + divFormLogin.height() + 'px') );
 }
 const resizeRootVariable = ( varName, value ) => {
     $(':root').css( varName, value );
@@ -59,4 +77,12 @@ const changeTheme = ( theme ) => {
     document.body.classList.add(`theme-${ theme }`);
     localStorage.setItem('g-theme', theme);
 }
+/* *************************************************************************************************** */
+// Bootstrap componentes
+// Popovers.
+var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+  return new bootstrap.Popover(popoverTriggerEl)
+})
+/* *************************************************************************************************** */
 /* *************************************************************************************************** */

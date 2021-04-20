@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="icon" href="./img/logo-goh/goh-logo-letter-light-transparent.png">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/lib/animate.min.css" />
     <link rel="stylesheet" href="css/lib/bootstrap.min.css">
     <link rel="stylesheet" href="css/lib/hover-min.css">
     <link rel="stylesheet" href="css/bootstrap.custom.css">
@@ -27,7 +28,7 @@
             <div id="sidebarContainer" class="size-100">
                 <div id="sidebarProfile" class="">
                     <div class="w-100 text-center mb-2">
-                        <img id="imgProfile" class="bg-gradient tr-1" src="./img/logo-1.png" alt="">
+                        <img id="imgProfile" class="bg-gradient tr-1" src="./img/logo-goh/goh-logo-b-dark.png" alt="">
                     </div>
                     <div id="" class="user-profile">
                         <div id="" class="profile-menu-icon">
@@ -53,8 +54,8 @@
                 <div id="sidebarOpc" class="m-opc m-opc-collapsed pt-1">
                     <div id="profileItems" class="">
                         <ul>
-                            <li class=""><i class="fas fa-home"></i>Home</li>
-                            <li class="active"><i class="fas fa-user-circle"></i>My profile</li>
+                            <li class="active"><i class="fas fa-home"></i>Home</li>
+                            <li class=""><i class="fas fa-user-circle"></i>My profile</li>
                             <li class=""><i class="far fa-address-card"></i>About Me</li>
                             <li class=""><i class="fas fa-code"></i>About this site</li>
                         </ul>
@@ -75,7 +76,21 @@
                               </ul>
                           </div>
                         </div>
-                        <div class="accordion-item active">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="flush-heading-pages">
+                            <div class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flushCollapse_pages" aria-expanded="false" aria-controls="flushCollapse_pages">
+                              <i class="m-opc-icon fas fa-chart-line"></i>
+                              Pages
+                            </div>
+                          </h2>
+                          <div id="flushCollapse_pages" class="accordion-collapse collapse" aria-labelledby="flush-heading1" data-bs-parent="#sidebarAccordion">
+                              <ul>
+                                  <li class="" onclick="window.location='./login.html'">Login</li>
+                                  <li class="" onclick="window.location='./errorpage.html'">Error Page</li>
+                              </ul>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
                           <h2 class="accordion-header active" id="flush-heading2">
                             <div class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flushCollapse_2" aria-expanded="false" aria-controls="flushCollapse_2">
                               <i class="m-opc-icon fab fa-wpforms"></i>
@@ -85,7 +100,7 @@
                           <div id="flushCollapse_2" class="accordion-collapse collapse" aria-labelledby="flush-heading2" data-bs-parent="#sidebarAccordion">
                               <ul>
                                   <li class="">Simple Forms</li>
-                                  <li class="active">Validation Forms</li>
+                                  <li class="">Validation Forms</li>
                                   <li class="">Datepicker</li>
                                   <li class="">Buttons</li>
                               </ul>

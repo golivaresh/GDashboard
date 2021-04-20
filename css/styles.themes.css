@@ -87,13 +87,41 @@
 }
 
 :root {
-    /* Theme */
-    --background-s: rgb(212, 19, 32);
-    --background-s-val: 212, 19, 32;
-
-    /* Fix */
-    --dark-1: rgb(99, 99, 99);
-    --dark-1-val: 99, 99, 99;
+     /* Theme */
+     --background-s: rgb(212, 19, 32);
+     --background-s-val: 212, 19, 32;
+     --background-s-1: rgb(240, 240, 240);
+     --background-s-1-val: 240, 240, 240;
+     --background-s-2: rgba(250, 65, 77);
+     --background-s-2-val: 250, 65, 77;
+     --primary-1: rgb(146, 7, 44);
+     --primary-1-val: 146, 7, 44;
+     --primary-2: rgb(195, 0, 0);
+     --primary-2-val: 195, 0, 0;
+     --primary-3: rgba(202,0,55);
+     --primary-3-val: 202,0,55;
+     --primary-4: rgb(255, 1, 65);
+     --primary-4-val: 255, 1, 65;
+     --primary-5: rgb(255, 99, 71);
+     --primary-5-val: 255, 99, 71;
+     --primary-6:rgb(241, 3, 67);
+     --primary-6-val: 241, 3, 67;
+     --light-1: rgb(235, 161, 178);
+     --light-1-val: 235, 161, 178;
+     --light-2: rgb(226, 156, 152);
+     --light-2-val: 226, 156, 152;
+     --light-3: rgb(248, 249, 250);
+     --light-3-val: 248, 249, 250;
+     --light-4: rgb(58, 218, 255);
+     --light-4-val: 58, 218, 255;
+     --light-5: rgb(247, 231, 121);
+     --light-5-val: 247, 231, 121;
+     --light-6: rgb(233, 159, 176);
+     --light-6-val: 233, 159, 176;
+     --light-7: rgba(222, 121, 247);
+     --light-7-val: 222, 121, 247;
+     --text-1: rgb(20, 20, 20);
+     --text-1-val: 20, 20, 20;
 }
 .theme-red {
     /* Theme */
