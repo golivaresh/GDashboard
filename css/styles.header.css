@@ -121,42 +121,42 @@ div#containerFluid {
 /* ************************************************** */
 /* Default */
 .size-100 {
-  height: 100%;
-  width: 100%;
+  height: 100% !important;
+  width: 100% !important;
 }
 
 .h-100-px {
-  height: 100px;
-  max-height: 100px;
+  height: 100px !important;
+  max-height: 100px !important;
 }
 
 .w-100-px {
-  width: 100px;
-  max-width: 100px;
+  width: 100px !important;
+  max-width: 100px !important;
 }
 
 .w-75-px {
-  width: 75px;
-  max-width: 75px;
+  width: 75px !important;
+  max-width: 75px !important;
 }
 
 .w-50-px {
-  width: 50px;
-  max-width: 50px;
+  width: 50px !important;
+  max-width: 50px !important;
 }
 
 .w-25-px {
-  width: 25px;
-  max-width: 25px;
+  width: 25px !important;
+  max-width: 25px !important;
 }
 
 .c-pointer {
-  cursor: pointer;
+  cursor: pointer !important;
 }
 
 .pm-0 {
-  padding: 0;
-  margin: 0;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 a {
@@ -176,6 +176,24 @@ a:active {
   text-decoration: none;
 }
 
+.overflow-x-auto {
+  overflow-x: auto !important;
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden !important;
+}
+
+.overflow-y-auto {
+  overflow-y: auto !important;
+}
+
+.overflow-y-hidden {
+  overflow-y: hidden !important;
+}
+
+/* ************************************************** */
+/* ************************************************** */
 .page-error {
   background-color: var(--primary-1);
   color: var(--text-1);
@@ -208,6 +226,20 @@ a:active {
 }
 
 /* ************************************************** */
+/* ************************************************** */
+.bg-login-page {
+  background-image: url(../img/login_wallpaper.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-login-form {
+  background-color: #efefef;
+}
+
+/* ************************************************** */
+/* ************************************************** */
 .glitch-container {
   letter-spacing: 8px;
   margin: 0;
@@ -229,35 +261,6 @@ a:active {
   animation: glitch3 2.5s infinite;
 }
 
-/* ************************************************** */
-#bgMainLogin {
-  background-image: url(../img/login_wallpaper.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-.bg-form-login {
-  background-color: #efefef;
-}
-
-#mainLogin {
-  overflow-y: auto;
-  overflow-x: none;
-  border-image-source: linear-gradient(10deg, #fe01f5 0%, #2e113d 100%);
-}
-
-#divLogin {
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.1);
-}
-#divLogin form {
-  width: 100%;
-  border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.8);
-  padding: 15px;
-  margin: 10px;
-}
 /* ************************************************** */
 /* ************************************************** */
 /* KeyFrames */
