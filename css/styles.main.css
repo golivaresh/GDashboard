@@ -31,12 +31,13 @@ Main Root
   flex-direction: column;
   flex-wrap: nowrap;
   overflow: hidden;
+  color: var(--text-1);
 }
 
 main.main {
   height: auto;
   flex-grow: 1;
-  background-color: var(--light-3);
+  background-color: var(--bg-1);
   color: var(--text-1);
   padding-top: 5px;
   overflow: auto;
@@ -73,10 +74,10 @@ main.main {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: solid 1px #92072C;
+  border: solid 1px var(--primary-2);
   border-radius: 50%;
   margin: 0px;
-  background-color: lavender;
+  background-color: var(--bg-2);
 }
 #btnMenuClose.btn-menu-expanded {
   right: 20px;

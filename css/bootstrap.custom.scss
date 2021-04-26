@@ -1,0 +1,92 @@
+/* ************************************************** */
+/* **************** Bootstrap Custom **************** */
+/* ************************************************** */
+@import "../lib/bootstrap-5.0.0-beta3/scss/functions";
+@import "../lib/bootstrap-5.0.0-beta3/scss/variables";
+@import "../lib/bootstrap-5.0.0-beta3/scss/mixins";
+// Theming Bootstrap
+$theme-colors: (
+  "g-primary": #900
+);
+@import "../lib/bootstrap-5.0.0-beta3/scss/bootstrap.scss";
+/* ************************************************** */
+/* ************************************************** */
+/* ******************** Dropdown ******************** */
+/* ************************************************** */
+/* Dropdown */
+/* dropdown-menu */
+.dropdown>.dropdown-menu {
+    -webkit-box-shadow: 0px 0px 5px 1px rgba(255,76,76,0.15);
+    -moz-box-shadow: 0px 0px 5px 1px rgba(255,76,76,0.15);
+    box-shadow: 0px 0px 5px 1px rgba(255,76,76,0.15);
+    background-color: var( --bg-1 );
+}
+.dropdown>.dropdown-menu.show {
+    overflow: hidden;
+    // transform-origin: top center;
+    // transform: scale(1, 0);
+}
+.dropdown-header {
+    color: var( --text-2 );
+}
+/* Item */
+.dropdown-item {
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    cursor: pointer;
+    color: var( --text-1 );
+}
+.dropdown-item.active:not(.dropdown-item-icon), .dropdown-item:not(.dropdown-item-icon):active {
+    color: whitesmoke;
+    text-decoration: none;
+    background-color: var( --primary-3 );
+}
+.dropdown-item.dropdown-item-icon.active, .dropdown-item.dropdown-item-icon:active {
+    @extend .dropdown-item;
+    @extend .bg-transparent;
+}
+.dropdown-item:focus:not(.dropdown-item-icon), .dropdown-item:hover:not(.dropdown-item-icon) {
+    color: whitesmoke;
+    background-color: var( --primary-4 );
+}
+.dropdown-item.dropdown-item-icon:focus, .dropdown-item.dropdown-item-icon:hover {
+    color: var( --text-1 );
+    @extend .bg-transparent;
+}
+/* ************************************************** */
+
+/* ************************************************** */
+/* ******************** Dropdown ******************** */
+/* ************************************************** */
+// textarea:focus,
+// input[type="text"]:focus,
+// input[type="password"]:focus,
+// input[type="datetime"]:focus,
+// input[type="datetime-local"]:focus,
+// input[type="date"]:focus,
+// input[type="month"]:focus,
+// input[type="time"]:focus,
+// input[type="week"]:focus,
+// input[type="number"]:focus,
+// input[type="email"]:focus,
+// input[type="url"]:focus,
+// input[type="search"]:focus,
+// input[type="tel"]:focus,
+// input[type="color"]:focus,
+// .uneditable-input:focus {   
+//   border-color: rgba(126, 239, 104, 0.8);
+//   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(126, 239, 104, 0.6);
+//   outline: 0 none;
+// }
+
+// .form-control:active,
+// .form-control:focus,
+// .form-control:focus:active {
+//   background-color: #96d3ec!important;
+//   border-color: #96d3ec;
+//   color: white;
+// }
+/* ************************************************** */

@@ -34,13 +34,12 @@ Sidebar Root
 /* Sidebar */
 nav#sidebar {
     height: 100%;
+    width: 100%;
     position: fixed!important;
     margin: 0;
-    overflow-x: hidden; /* Disable horizontal scroll */
     display: flex;
     color: whitesmoke;
     z-index: 2;
-    width: 100%;
     &.m-collapsed {
         top: 100%;
     }
@@ -60,14 +59,14 @@ nav#sidebar {
         display: flex;
         flex-direction: column;
         position: absolute;
-        background-color: rgba( var(--background-s-val), 0.7);
+        background-color: rgba( var( --primary-4-val ), 0.9);
         div#sidebarProfile {
             @extend .m-border-b;
             padding-top: 10px;
             div img#imgProfile {
                 width: 20%;
                 border-radius: 50%;
-                border: solid var( --light-1 );
+                border: solid 2px var( --primary-1 );
                 &:hover {
                     animation: flip;
                     animation-duration: 2s;
@@ -88,7 +87,6 @@ nav#sidebar {
                 }
                 .profile-menu-name {
                     display: flex;
-                    text-align: center;
                     align-items: center;
                     flex-grow: 2;
                     justify-content: center;
@@ -101,11 +99,11 @@ nav#sidebar {
                     align-items: center;
                     padding: 10px 0px;
                     i {
-                        color: var(--light-5);
+                        color: var( --complement-1 );
                         &:hover {
                             animation: heartBeat;
                             animation-duration: 1s;
-                            color: var(--light-7);
+                            color: var( --secondary-2-1 );
                         }
                     }
                 }
@@ -115,6 +113,11 @@ nav#sidebar {
                     }
                     .profile-menu-name {
                         font-size: 0.8rem;
+                        justify-content: left;
+                    }
+                    .profile-social {
+                        justify-content: space-between;
+                        padding-right: 10px;
                     }
                 }
             }
@@ -157,10 +160,10 @@ nav#sidebar {
                     margin: 0px;
                     li {
                         list-style: none;
-                        background-color: rgba(255, 255, 255, 0);
+                        @extend .bg-transparent;
                         padding: 0.3rem 1.25rem;
                         &.active {
-                            background-color: rgba(var(--light-1-val), 0.27);
+                            background-color: rgba(var(--primary-2-val), 0.27);
                         }
                         i {
                             @extend .m-icon;
@@ -171,7 +174,7 @@ nav#sidebar {
                             &:hover {
                                 animation: shakeX;
                                 animation-duration: 2s;
-                                background-color: var(--primary-2);
+                                background-color: var(--primary-3);
                             }
                         }
                     }
@@ -187,17 +190,19 @@ nav#sidebar {
             }
             div#sidebarAccordion {
                 .accordion-item {
+                    @extend .bg-transparent;
                     .accordion-header:not(.collapsed) {
                         &.active{
-                            background-color: rgba(var(--dark-1), 0.27);
+                            background-color: rgba(var(--primary-2-val), 0.27);
                         }
                         .accordion-button{
+                            @extend .bg-transparent;
                             &.collapsed {
                                 color: #ffffff;
                             }
                             &:not(.collapsed) {
-                                color: var(--light-2);
-                                background-color: var(--primary-1);
+                                color: whitesmoke;
+                                background-color: rgba(var(--primary-2-val), 0.27);
                             }
                             i {
                                 @extend .m-icon;
@@ -209,15 +214,12 @@ nav#sidebar {
                         }
                         @include media( md ) {
                             &:hover {
-                                background-color: var(--primary-2);
+                                background-color: var(--primary-3);
                             }
                         }
                     }
                     div[id^="flushCollapse"] {
                         text-align: center;
-                        div.accordion-collapse {
-                            background-color: var(--primary-3);
-                        }
                         @include media( md ){
                             text-align: left;
                         }
@@ -226,13 +228,13 @@ nav#sidebar {
                             li {
                                 list-style: none;
                                 padding: 15px 10px;
-                                background-color: rgb(255, 255, 255, 0);
+                                @extend .bg-transparent;
                                 &:hover {
                                     animation: shakeX;
                                     animation-duration: 2s;
                                 }
                                 &.active {
-                                    background-color: rgb(var(--dark-1-val), 0.27);
+                                    background-color: rgba(var(--primary-2-val), 0.27);
                                 }
                             }
                         }
@@ -253,18 +255,12 @@ nav#sidebar {
         }
     }
     @include media( xs ) {
-        // &.m-expanded {
-        //     width: 100%;
-        // }
     }
     @include media( sm ) {
-        // &.m-expanded {
-        //     width: 100%;
-        // }
     }
     @include media( md ) {
         left: 0;
-        border-right: solid 1px var(--light-4);
+        border-right: solid 2px var( --complement-3 );
         &.m-collapsed {
             &:hover {
                 width: 250px;
@@ -290,7 +286,7 @@ nav#sidebar {
 }
 .m-icon {
     font-size: 1.5rem;
-    color: var( --light-4 );
+    color: var( --secondary-1-1 );
     @include media( md ){
         font-size: 1.2rem;
     }
@@ -299,7 +295,7 @@ nav#sidebar {
     border-bottom: solid 1px rgba(255, 255, 255, 0.281);
 }
 .copyright {
-    color: var( --light-1 );
+    color: var( --complement-1 );
     @extend .tr-2;
     &:hover {
         color:#9c9c9c;

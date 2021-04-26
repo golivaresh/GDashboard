@@ -18,6 +18,8 @@ Header Root
 /* ************************************************** */
 /* ************************************************** */
 /* Header */
+$primary-color: var( --primary-1 ); // TODO verificar esto
+$primary-color: red; // TODO verificar esto
 header.header {
     box-shadow: -1px 0px 5px 0px rgba(0,0,0,0.75);
     -webkit-box-shadow: -1px 0px 5px 0px rgba(0,0,0,0.75);
@@ -26,7 +28,8 @@ header.header {
     max-height: 150px;
     z-index: 1;
     padding: 0.5rem 0.1rem;
-    background-color: var(--background-s-1);
+    background-color: scale-color($primary-color, $lightness: +40%); // TODO verificar esto
+    background-color: var( --bg-0 );
     @include media( md ) {
         padding: 1rem 0.5rem 1rem 0.5rem;
     }
@@ -36,7 +39,11 @@ header.header {
     &.btn-menu-collapsed{
         @extend .rotate-180;
     }
-    color: var(--primary-3);
+    color: gainsboro;
+}
+
+.btn-header {
+    color: gainsboro;
 }
 
 div#actionSection {
@@ -44,7 +51,7 @@ div#actionSection {
     z-index: 2;
     display: flex;
     padding: 5px 5px 0px 5px;
-    border-top: solid 1px var(--primary-4);
+    border-top: solid 1px var( --complement-2 );
     display: none;
     div#actionInput {
         display: flex;
@@ -61,26 +68,26 @@ div.bg-s-selector {
         width: 35px;
         margin: 5px 5px;
         border-radius: 10%;
-        border: solid 2px var(--primary-5);
+        border: solid 2px var( --secondary-1-0 );
         display: flex;
         align-items: center;
         justify-content: center;
         &:hover {
             animation: tada;
             animation-duration: 1s;
-            border: solid 2px var(--primary-1);
+            border: solid 2px var( --secondary-2-1 );
         }
     }
 }
 
 .icon-border {
     border-radius: 10%;
-    border: solid 2px var(--primary-5);
+    border: solid 2px var( --secondary-1-0 );
 }
 .icon-border-hv {
     animation: tada;
     animation-duration: 1s;
-    border: solid 2px var(--primary-1);
+    border: solid 2px var( --secondary-2-1 );
 }
 
 .icon-hv {

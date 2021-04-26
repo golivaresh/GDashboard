@@ -143,6 +143,10 @@ div#containerFluid {
   margin: 0 !important;
 }
 
+.bg-transparent {
+  background-color: rgba(255, 255, 255, 0);
+}
+
 a {
   color: white;
 }

@@ -8,10 +8,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/lib/animate.min.css" />
-    <link rel="stylesheet" href="css/lib/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/bootstrap-5.0.0-beta3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/lib/hover-min.css">
-    <link rel="stylesheet" href="css/bootstrap.custom.css">
     <link rel="stylesheet" href="css/styles.themes.css">
+    <link rel="stylesheet" href="css/bootstrap.custom.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/styles.sidebar.css">
     <link rel="stylesheet" href="css/styles.main.css">
@@ -23,8 +23,14 @@
     <div id="containerFluid" class="">
         <!-- ***************************** -->
         <!-- ********** Sidebar ********** -->
-        <nav id="sidebar" class="tr-1 m-collapsed c-pointer">
+        <nav id="sidebar" class="tr-1 m-collapsed c-pointer overflow-x-hidden">
+            <!-- ***************************** -->
+            <!-- ********* Sidebar BG ******** -->
             <div id="sidebarBg" class="size-100 imgActive tr-2" style="background-repeat: no-repeat;background-position: center;background-size: cover;"></div>
+            <!-- ***************************** -->
+
+            <!-- ***************************** -->
+            <!-- ***** Sidebar Container ***** -->
             <div id="sidebarContainer" class="size-100">
                 <div id="sidebarProfile" class="">
                     <div class="w-100 text-center mb-2">
@@ -77,7 +83,7 @@
                           </div>
                         </div>
                         <div class="accordion-item">
-                          <h2 class="accordion-header" id="flush-heading-pages">
+                          <h2 class="accordion-header active" id="flush-heading-pages">
                             <div class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flushCollapse_pages" aria-expanded="false" aria-controls="flushCollapse_pages">
                               <i class="m-opc-icon fas fa-chart-line"></i>
                               Pages
@@ -86,12 +92,12 @@
                           <div id="flushCollapse_pages" class="accordion-collapse collapse" aria-labelledby="flush-heading1" data-bs-parent="#sidebarAccordion">
                               <ul>
                                   <li class="" onclick="window.location='./login.html'">Login</li>
-                                  <li class="" onclick="window.location='./errorpage.html'">Error Page</li>
+                                  <li class="active" onclick="window.location='./errorpage.html'">Error Page</li>
                               </ul>
                           </div>
                         </div>
                         <div class="accordion-item">
-                          <h2 class="accordion-header active" id="flush-heading2">
+                          <h2 class="accordion-header" id="flush-heading2">
                             <div class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flushCollapse_2" aria-expanded="false" aria-controls="flushCollapse_2">
                               <i class="m-opc-icon fab fa-wpforms"></i>
                               Forms
@@ -122,7 +128,6 @@
                         </div>
                     </div>
                     <!-- ***************************** -->
-
                 </div>
                 <div id="sidebarFooter" class="sidebar-footer text-footer">
                     <div class="text-center">
@@ -132,42 +137,56 @@
                     </div>
                 </div>
             </div>
+            <!-- ***************************** -->
         </nav>
         <!-- ***************************** -->
+
         <!-- ***************************** -->
-        <!-- *********** Main ************ -->
+        <!-- ******* Main Container ****** -->
         <div id="mainContainer" class="main-container m-main-collapsed tr-1">
+
+            <!-- ***************************** -->
+            <!-- *********** Header ********** -->
             <header class="header row m-0 tr-2">
+                <!-- ***************************** -->
+                <!-- ***** Button Menu Header **** -->
                 <h3 id="btnMenuToggleHeader" class="btnMenuToggle btn-menu btn-menu-collapsed m-0 col-1 d-none d-md-inline-block text-center c-pointer tr-2">
                     <i class="fas fa-chevron-circle-left hvr-wobble-horizontal"></i>
                 </h3>
+                <!-- ***************************** -->
+                
+                <!-- ***************************** -->
+                <!-- ***** Menu/Action Header **** -->
                 <div class="col-12 col-md-11 text-end">
                     <div class="btn-group dropdown">
                         <a id="btnCloseActionSection" class="btn btn-link" style="display: none;" onclick="toggleActionSection();" type="button" id="dropdownMenu2" data-bs-toggle="" aria-expanded="false">
-                            <i class="far fa-times-circle"></i>
+                            <i class="far fa-times-circle btn-header"></i>
                         </a>
                     </div>
                     <div class="btn-group dropdown">
                         <a class="btn btn-link" onclick="toggleActionSection('divGlobalSearch');" type="button" id="dropdownMenu2" data-bs-toggle="" aria-expanded="false">
-                            <i class="fas fa-search"></i>
+                            <i class="fas fa-search btn-header"></i>
                         </a>
                     </div>
                     <div class="btn-group dropdown">
                         <a class="btn btn-link" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="fas fa-cog"></i>
+                            <i class="fas fa-cog btn-header"></i>
                         </a>
                         <ul class="dropdown-menu tr-2" aria-labelledby="dropdownConfig">
                             <h6 class="dropdown-header text-center">Configuration</h6>
                             <li class="pt-2 pb-2">
-                                <div class="dropdown-item d-flex flex-wrap justify-content-around">
-                                    <img src="./img/flag-es_mx.svg.png" class="icon-lang" alt="Español">
-                                    <img src="./img/flag-en_us.svg.png" class="icon-lang" alt="English">
+                                <div class="dropdown-item dropdown-item-icon">
+                                    Language
+                                    <div class="d-flex flex-wrap justify-content-around mt-2">
+                                        <img src="./img/flag-es_mx.svg.png" class="icon-lang" alt="Español">
+                                        <img src="./img/flag-en_us.svg.png" class="icon-lang" alt="English">
+                                    </div>
                                 </div>
                             </li>
                             <div class="dropdown-divider"></div>
                             <h6 class="dropdown-header text-center">Sidebar</h6>
                             <li>
-                                <div class="dropdown-item">
+                                <div class="dropdown-item dropdown-item-icon">
                                     Background image
                                     <div class="d-flex flex-wrap justify-content-around mt-2">
                                         <div class="bg-s-selector w-100 d-flex">
@@ -194,7 +213,7 @@
                                 </div>
                             </li>
                             <li>
-                                <div class="dropdown-item">
+                                <div class="dropdown-item dropdown-item-icon">
                                     Theme
                                     <div class="d-flex flex-wrap justify-content-around mt-2">
                                         <div onclick="changeTheme('black')" class="icon-theme text-dark bg-dark"></div>
@@ -206,12 +225,12 @@
                     </div>
                     <div class="btn-group dropdown">
                         <a class="btn btn-link" type="button" id="dropdownMenu3" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="fas fa-user"></i>
+                            <i class="fas fa-user btn-header"></i>
                         </a>
                         <ul class="dropdown-menu tr-2" aria-labelledby="dropdownUser">
                             <h6 class="dropdown-header">User</h6>
                             <li><button class="dropdown-item" type="button"><i class="fas fa-user-alt"></i> Profile</button></li>
-                            <li><button class="dropdown-item" type="button"><i class="fas fa-sign-out-alt"></i> Sign Out</button></li>
+                            <li><button class="dropdown-item active" type="button"><i class="fas fa-sign-out-alt"></i> Sign Out</button></li>
                         </ul>
                     </div>
                 </div>
@@ -220,17 +239,22 @@
                         <div id="divGlobalSearch" class="d-flex w-100">
                             <div class="flex-grow-1">
                                 <input id="txtGlobalSearch" type="text" class="form-control" placeholder="global search" aria-describedby="global search">
-                                <div id="emailHelp" class="form-text">Press enter to search.</div>
+                                <div id="emailHelp" class="form-text text-warning">Press enter to search.</div>
                             </div>
                             <div class="flex-grow-0 d-flex justify-content-center align-items-start p-0 m-0 ms-1 h-100 c-pointer h3">
-                                <button onclick="cleanElement('txtGlobalSearch');" class="btn btn-outline-secondary" type="button">
+                                <button onclick="cleanElement('txtGlobalSearch');" class="btn btn-outline-light" type="button">
                                     <i class="fas fa-backspace"></i>
                                 </button>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- ***************************** -->
             </header>
+            <!-- ***************************** -->
+
+            <!-- ***************************** -->
+            <!-- ************ Main *********** -->
             <main class="main">
                 <div class="container-fluid">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
@@ -316,6 +340,10 @@
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur?
                 </div>
             </main>
+            <!-- ***************************** -->
+
+            <!-- ***************************** -->
+            <!-- ***** Button Menu Mobil ***** -->
             <div id="btnMenuToggleMain" class="btnMenuToggle btn-menu-main btn-menu-collapsed c-pointer tr-2 d-md-none h2" >
                 <i class="fas fa-bars"></i>
             </div>
@@ -323,6 +351,7 @@
                 <!-- <i class="fas fa-chevron-right"></i> -->
                 <i class="fas fa-chevron-down"></i>
             </div>
+            <!-- ***************************** -->
         </div>
         <!-- ***************************** -->
     </div>
@@ -334,7 +363,7 @@
     <!-- Scripts -->
     <script src="js/lib/jquery-3.6.0.min.js"></script>
     <script src="js/lib/popper.min.js"></script>
-    <script src="js/lib/bootstrap.bundle.min.js"></script>
+    <script src="lib/bootstrap-5.0.0-beta3/dist/js/bootstrap.bundle.js"></script>
     <script src="js/main.js"></script>
     <script src="js/sidebar.js"></script>
     <script src="js/header.js"></script>
