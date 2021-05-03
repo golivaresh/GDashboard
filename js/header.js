@@ -30,13 +30,11 @@ const cleanElement = ( inputId, defaultValue ) => {
     const inputElem = $( `#${ inputId }` );
     if ( inputElem && inputElem.length > 0 ) {
         inputElem[0].value = ( defaultValue ) ? defaultValue : '';
-        console.log(inputElem[0]);
     }
 };
 
 
 const changeSidebarBg = ( img ) => {
-    console.log((img === null || img === undefined) ? img : 'vacio');
     localStorage.setItem( 'sidebarImgUrl', (img) ? img : '' );
     CSS_SIDEBAR_BG.background = `url(${ ((img) ? img : './img/sidebar/no-image-bg.jpg') })`;
     

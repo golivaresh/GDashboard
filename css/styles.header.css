@@ -463,11 +463,11 @@ a:active {
 /* ************************************************** */
 /* Header */
 header.header {
-  border-bottom: solid 1px var(--text-3);
+  border-bottom: solid 1px var(--text-5);
   max-height: 150px;
   z-index: 1;
   padding: 0.5rem 0.1rem;
-  background-color: rgba(var(--bg-0-val), 0.95);
+  background-color: rgba(var(--bg-0-val), 0.8);
 }
 @media (min-width: 768px) {
   header.header {

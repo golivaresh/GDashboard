@@ -6,20 +6,28 @@
 @import "../lib/bootstrap-5.0.0-beta3/scss/mixins";
 // Theming Bootstrap
 $theme-colors: (
-  "g-primary": #900
+    "primary":    $blue-500,
+    "secondary":  $secondary,
+    "success":    $teal-500,
+    "info":       $cyan,
+    "warning":    $warning,
+    "danger":     $red-500,
+    "light":      $light,
+    "dark":       $dark
 );
 @import "../lib/bootstrap-5.0.0-beta3/scss/bootstrap.scss";
 /* ************************************************** */
+
 /* ************************************************** */
 /* ******************** Dropdown ******************** */
 /* ************************************************** */
 /* Dropdown */
 /* dropdown-menu */
 .dropdown>.dropdown-menu {
-    -webkit-box-shadow: 0px 0px 5px 1px rgba(255,76,76,0.15);
-    -moz-box-shadow: 0px 0px 5px 1px rgba(255,76,76,0.15);
-    box-shadow: 0px 0px 5px 1px rgba(255,76,76,0.15);
-    background-color: var( --bg-1 );
+    -webkit-box-shadow: 0px 0px 5px 1px rgba(var( --primary-3-val ),0.15);
+    -moz-box-shadow: 0px 0px 5px 1px rgba(var( --primary-3-val ),0.15);
+    box-shadow: 0px 0px 5px 1px rgba(var( --primary-3-val ),0.15);
+    background-color: var( --bg-4 );
 }
 .dropdown>.dropdown-menu.show {
     overflow: hidden;
@@ -59,28 +67,45 @@ $theme-colors: (
 /* ************************************************** */
 
 /* ************************************************** */
-/* ******************** Dropdown ******************** */
+/* ********************* Buttons ******************** */
 /* ************************************************** */
-// textarea:focus,
-// input[type="text"]:focus,
-// input[type="password"]:focus,
-// input[type="datetime"]:focus,
-// input[type="datetime-local"]:focus,
-// input[type="date"]:focus,
-// input[type="month"]:focus,
-// input[type="time"]:focus,
-// input[type="week"]:focus,
-// input[type="number"]:focus,
-// input[type="email"]:focus,
-// input[type="url"]:focus,
-// input[type="search"]:focus,
-// input[type="tel"]:focus,
-// input[type="color"]:focus,
-// .uneditable-input:focus {   
-//   border-color: rgba(126, 239, 104, 0.8);
-//   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(126, 239, 104, 0.6);
-//   outline: 0 none;
-// }
+button.btn.btn-g {
+    background-color: var( --bg-1 );
+    color: var( --text-1 );
+    border-color: var( --text-2 );
+}
+/* ************************************************** */
+
+/* ************************************************** */
+/* ********************** Input ********************* */
+/* ************************************************** */
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {   
+    background-color: var( --bg-0 );
+    border-color: var( --text-0 );
+    color: var( --text-1 );
+    &:focus {
+        background-color: var( --bg-0 );
+        border-color: var( --text-0 );
+        color: var( --text-1 );
+        //   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(var(--complement-3-val), 1);
+        outline: 0 none;
+  }
+}
 
 // .form-control:active,
 // .form-control:focus,
@@ -89,4 +114,33 @@ $theme-colors: (
 //   border-color: #96d3ec;
 //   color: white;
 // }
+/* ************************************************** */
+
+/* ************************************************** */
+/* ***************** Checks y Radios **************** */
+/* ************************************************** */
+input[type="checkbox"].form-check-input.check-primary:checked {
+    @extend .btn-primary;
+}
+input[type="checkbox"].form-check-input.check-secondary:checked {
+    @extend .btn-secondary;
+}
+input[type="checkbox"].form-check-input.check-success:checked {
+    @extend .btn-success;
+}
+input[type="checkbox"].form-check-input.check-info:checked {
+    @extend .btn-info;
+}
+input[type="checkbox"].form-check-input.check-warning:checked {
+    @extend .btn-warning;
+}
+input[type="checkbox"].form-check-input.check-danger:checked {
+    @extend .btn-danger;
+}
+input[type="checkbox"].form-check-input.check-light:checked {
+    @extend .btn-light;
+}
+input[type="checkbox"].form-check-input.check-dark:checked {
+    @extend .btn-dark;
+}
 /* ************************************************** */

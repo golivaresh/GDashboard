@@ -37,7 +37,7 @@ Main Root
 main.main {
   height: auto;
   flex-grow: 1;
-  background-color: rgba(var(--bg-0-val), 0.9);
+  background-color: rgba(var(--bg-0-val), 0.85);
   color: var(--text-1);
   padding-top: 5px;
   overflow: auto;
