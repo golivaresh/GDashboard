@@ -59,7 +59,7 @@ nav#sidebar {
         display: flex;
         flex-direction: column;
         position: absolute;
-        background-color: rgba( var( --primary-4-val ), 0.9);
+        background-color: rgba( var( --primary-1-val ), 0.9);
         div#sidebarProfile {
             @extend .m-border-b;
             padding-top: 10px;
@@ -99,7 +99,7 @@ nav#sidebar {
                     align-items: center;
                     padding: 10px 0px;
                     i {
-                        color: var( --complement-1 );
+                        color: whitesmoke;
                         &:hover {
                             animation: heartBeat;
                             animation-duration: 1s;
@@ -260,8 +260,10 @@ nav#sidebar {
     }
     @include media( md ) {
         left: 0;
-        border-right: solid 2px var( --complement-3 );
         &.m-collapsed {
+            box-shadow: 0px 0px 5px 1px rgba(var(--bg-4-val), 75);
+            -webkit-box-shadow: 0px 0px 5px 1px rgba(var(--bg-4-val), 75);
+            -moz-box-shadow: 0px 0px 5px 1px rgba(var(--bg-4-val), 75);
             &:hover {
                 width: 250px;
             }
