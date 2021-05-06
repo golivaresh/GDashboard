@@ -297,10 +297,10 @@ nav#sidebar {
     border-bottom: solid 1px rgba(255, 255, 255, 0.281);
 }
 .copyright {
-    color: var( --complement-1 );
+    color: whitesmoke;
     @extend .tr-2;
     &:hover {
-        color:#9c9c9c;
+        color: var( --secondary-1-1 );
         animation: rubberBand;
         animation-duration: 2s;
     }

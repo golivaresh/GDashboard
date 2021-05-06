@@ -15,13 +15,22 @@
     <link rel="stylesheet" href="css/styles.css">
     <title>Login</title>
 </head>
-<body class="container-fluid">
+<body class="container-fluid p-0 m-0">
     <div class="row h-100 p-0 m-0">
+
+        <!-- ***************************** -->
+        <!-- ********* Login Main ******** -->
         <div id="mainLogin" class="col-12 col-sm-6 col-md-4 col-xl-3 h-100 d-flex flex-column p-0 m-0 overflow-y-auto overflow-x-hidden">
+            <!-- ***************************** -->
+            <!-- ********* Login Logo ******** -->
             <div class="flex-grow-0 bg-login-form text-center py-2 h-25 d-flex align-items-center justify-content-center">
-                <img src="./img/logo-goh/goh-logo-b-transparent-light.png" alt="" class="w-75-px">
+                <img src="./img/logo-goh/goh-logo-c-transparent-dark.png" alt="" class="w-75-px">
             </div>
-            <div class="bg-login-form flex-grow-1 d-flex px-3 align-items-start justify-content-center" >
+            <!-- ***************************** -->
+
+            <!-- ***************************** -->
+            <!-- ********* Login Form ******** -->
+            <div class="flex-grow-1 d-flex px-3 align-items-start justify-content-center" >
                 <form action="#" class="col-12 col-lg-11">
                     <legend class="text-dark"><h2>Login to your account</h2></legend>
                     <hr class="text-dark mb-3">
@@ -49,17 +58,31 @@
                     <div class="mb-3 form-check">
                         <input type="checkbox" class="form-check-input check-success" id="exampleCheck1">
                         <label class="form-check-label text-dark" for="exampleCheck1">Remember me</label>
-                      </div>
-                    <div class="text-center text-md-start">
+                    </div>
+                    <!-- <div class="text-center text-md-start">
                         <button type="button" class="btn btn-success w-auto text-white">Login</button>
                     </div>
                     <div class="text-start mt-2 c-pointer">
                         Don't have an account?
                         <a href="signUp.html" class="text-success btn-toggle-login">Sign Up</a>
+                    </div> -->
+                    <div class="row">
+                        <div class="col-12 text-center text-md-start mt-2">
+                            <button type="button" class="btn btn-success text-white w-100">Login</button>
+                        </div>
+                        <div class="col-12 text-start mt-2 c-pointer d-flex align-items-end">
+                            Don't have an account?&nbsp;
+                            <a href="signUp.html" class="text-success btn-toggle-login">Sign Up</a>
+                        </div>
                     </div>
                 </form>
             </div>
+            <!-- ***************************** -->
         </div>
+        <!-- ***************************** -->
+
+        <!-- ***************************** -->
+        <!-- ********** Login BG ********* -->
         <div id="mainLoginImg" class="bg-login-page d-none d-sm-flex flex-sm-column justify-content-end col-sm-6 col-md-8 col-xl-9 h-100 p-0 m-0">
             <div class="p-2 text-end">
                 <h1 class="text-white-50 m-0">
@@ -72,6 +95,7 @@
                 </div>
             </div>
         </div>
+        <!-- ***************************** -->
     </div>
 
     <!-- Scripts -->

@@ -215,15 +215,18 @@ a:active {
 
 /* ************************************************** */
 /* ************************************************** */
-.bg-login-page {
-  background-image: url(../img/login_wallpaper.jpg);
+.bg-page, .bg-signup-page, .bg-login-page {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
-.bg-login-form {
-  background-color: #efefef;
+.bg-login-page {
+  background-image: url(../img/login_wallpaper.jpg);
+}
+
+.bg-signup-page {
+  background-image: url(../img/login_wallpaper.jpg);
 }
 
 /* ************************************************** */

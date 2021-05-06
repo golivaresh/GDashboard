@@ -7,10 +7,10 @@
 // Theming Bootstrap
 $theme-colors: (
     "primary":    $blue-500,
-    "secondary":  $secondary,
+    "secondary":  $gray-500,
     "success":    $teal-500,
     "info":       $cyan,
-    "warning":    $warning,
+    "warning":    $orange-500,
     "danger":     $red-500,
     "light":      $light,
     "dark":       $dark
@@ -27,7 +27,7 @@ $theme-colors: (
     -webkit-box-shadow: 0px 0px 5px 1px rgba(var( --primary-3-val ),0.15);
     -moz-box-shadow: 0px 0px 5px 1px rgba(var( --primary-3-val ),0.15);
     box-shadow: 0px 0px 5px 1px rgba(var( --primary-3-val ),0.15);
-    background-color: var( --bg-4 );
+    background-color: var( --bg-3 );
 }
 .dropdown>.dropdown-menu.show {
     overflow: hidden;
@@ -102,9 +102,12 @@ input[type="color"],
         background-color: var( --bg-0 );
         border-color: var( --text-0 );
         color: var( --text-1 );
-        //   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(var(--complement-3-val), 1);
+        box-shadow: 0 1px 1px rgba(255, 255, 255, 0.87) inset, 0 0 8px $success;
         outline: 0 none;
-  }
+    }
+    &::placeholder {
+        color: var( --text-4 );
+    }
 }
 
 // .form-control:active,

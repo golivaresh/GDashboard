@@ -8,86 +8,139 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/lib/animate.min.css" />
-    <link rel="stylesheet" href="css/lib/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/bootstrap-5.0.0-beta3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/lib/hover-min.css">
     <link rel="stylesheet" href="css/bootstrap.custom.css">
     <link rel="stylesheet" href="css/styles.themes.css">
     <link rel="stylesheet" href="css/styles.css">
-    <title>Login</title>
+    <title>SignUp</title>
 </head>
-<body class="container-fluid">
+<body class="container-fluid p-0 m-0">
     <div class="row h-100 p-0 m-0">
-        <div id="mainLogin" class="col-12 col-sm-6 col-md-4 col-xl-3 h-100 d-flex flex-column p-0 m-0">
-            <div class="flex-grow-0 bg-form-login text-center py-2">
-                <img src="./img/logo-goh/goh-logo-b-transparent-light.png" alt="" class="w-75-px">
-            </div>
-            <div class="bg-form-login flex-grow-1 d-flex px-3 align-items-center justify-content-center" >
-                <form action="#" class="col-12 col-lg-11">
-                    <legend class="text-dark"><h2>Login to your account</h2></legend>
-                    <hr class="text-dark mb-3">
-                    <div class="mb-2 text-center text-md-start">
-                        <label for="txtUsername" class="form-label text-dark">
-                            Username
-                            <i class="fas fa-info-circle text-muted" 
-                                data-bs-toggle="popover" data-bs-trigger="hover focus" 
-                                data-bs-content="Enter your username that you used to register."></i>
-                        </label>
-                        <input type="text" class="form-control" id="txtUsername" aria-describedby="Username" placeholder="username">
-                        <div id="usernameHelp" class="form-text text-danger d-none">You must capture your username.</div>
-                    </div>
-                    <div class="mb-2 text-center text-md-start">
-                        <label for="txtPassword" class="form-label text-dark">
-                            Password
-                            <i class="fas fa-info-circle text-muted" 
-                                data-bs-toggle="popover" data-bs-trigger="hover focus" 
-                                data-bs-content="Enter your super, secret password."></i>
-                        </label>
-                        
-                        <input type="password" class="form-control" id="txtPassword" aria-describedby="Password" placeholder="**********">
-                        <div id="passwordHelp" class="form-text text-danger d-none">You must capture your secret password.</div>
-                    </div>
-                    <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label text-dark" for="exampleCheck1">Remember me</label>
-                      </div>
-                    <div class="text-center text-md-start">
-                        <button type="button" class="btn btn-dark w-auto">Login</button>
-                    </div>
-                    <div class="text-start mt-2 c-pointer">
-                        Don't have an account?
-                        <a href="signUp.html" class="text-success btn-toggle-login">Sign Up</a>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <div id="bgMainLogin" class="d-none d-sm-flex flex-sm-column justify-content-end col-sm-6 col-md-8 col-xl-9 h-100 p-0 m-0">
-            <div class="p-2 text-end">
-                <!-- <img src="./img/logo-goh/goh-logo-letter-dark-transparent.png" alt="" class="w-100-px d-none d-md-block">
-                <img src="./img/logo-goh/goh-logo-letter-light-transparent.png" alt="" class="w-100-px d-block d-md-none"> -->
+        <!-- ***************************** -->
+        <!-- ********* SignUp BG ********* -->
+        <div id="mainSignUpImg" class="bg-login-page d-none d-md-flex flex-md-column justify-content-end col-md-4 col-xl-5 h-100 p-0 m-0">
+            <div class="p-2 text-center">
                 <h1 class="text-white-50 m-0">
                     Welcome
                 </h1>
-                <div class="text-end text-white-50">
+                <div class="text-center text-white-50">
                     <div class="copyright pull-right"> 
                         ©2021 goh
                     </div>
                 </div>
             </div>
         </div>
-        <!-- <div id="" class="d-none d-sm-block col-sm-6 col-md-8 col-xl-9 h-100 p-0 m-0 d-flex bg-danger">
-            <div class="bg-primary h-100">
-                asdfsa
+        <!-- ***************************** -->
+
+        <!-- ***************************** -->
+        <!-- ******** SignUp Main ******** -->
+        <div id="mainSignUp" class="col-12 col-md-8 col-xl-7 h-100 d-flex flex-column p-0 m-0 overflow-y-auto overflow-x-hidden">
+            <!-- ***************************** -->
+            <!-- ******** SignUp Logo ******** -->
+            <div class="flex-grow-0 text-center py-2 h-25 d-flex align-items-center justify-content-center">
+                <img src="./img/logo-goh/goh-logo-c-transparent-dark.png" alt="" class="w-75-px">
             </div>
-        </div> -->
+            <!-- ***************************** -->
+
+            <!-- ***************************** -->
+            <!-- ******** SignUp Form ******** -->
+            <div class="flex-grow-1 d-flex px-3 align-items-start justify-content-center" >
+                <form action="#" class="col-12 col-lg-11">
+                    <legend class="text-dark"><h2>Create your account</h2></legend>
+                    <hr class="text-dark mb-3">
+
+                    <div class="row">
+                        <div class="col-12 col-sm-5 mb-2 text-center text-sm-start">
+                            <label for="txtUsername" class="form-label text-dark">
+                                Username
+                                <i class="fas fa-info-circle text-muted" 
+                                    data-bs-toggle="popover" data-bs-trigger="hover focus" 
+                                    data-bs-content="Enter your username that you used to register."></i>
+                            </label>
+                            <input type="text" class="form-control" id="txtUsername" aria-describedby="Username" placeholder="Username">
+                            <div id="usernameHelp" class="form-text text-danger d-none">You must capture your username.</div>
+                        </div>
+                        <div class="col-12 col-sm-7 mb-2 text-center text-sm-start">
+                            <label for="txtEmail" class="form-label text-dark">
+                                Email address
+                                <i class="fas fa-info-circle text-muted" 
+                                    data-bs-toggle="popover" data-bs-trigger="hover focus" 
+                                    data-bs-content="Enter your email address."></i>
+                            </label>
+                            <input type="text" class="form-control" id="txtEmail" aria-describedby="Email" placeholder="email@example.com">
+                            <div id="emailHelp" class="form-text text-danger d-none">You must capture your email address.</div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 col-sm-6 mb-2 text-center text-sm-start">
+                            <label for="txtFirstName" class="form-label text-dark">
+                                First Name
+                                <i class="fas fa-info-circle text-muted" 
+                                    data-bs-toggle="popover" data-bs-trigger="hover focus" 
+                                    data-bs-content="Enter your First Name."></i>
+                            </label>
+                            <input type="text" class="form-control" id="txtFirstName" aria-describedby="First name" placeholder="Peter">
+                            <div id="firstNameHelp" class="form-text text-danger d-none">You must capture your first name.</div>
+                        </div>
+                        <div class="col-12 col-sm-6 mb-2 text-center text-sm-start">
+                            <label for="txtLastName" class="form-label text-dark">
+                                Last Name
+                                <i class="fas fa-info-circle text-muted" 
+                                    data-bs-toggle="popover" data-bs-trigger="hover focus" 
+                                    data-bs-content="Enter your Last Name."></i>
+                            </label>
+                            <input type="text" class="form-control" id="txtLastName" aria-describedby="Last name" placeholder="Parker">
+                            <div id="lastNameHelp" class="form-text text-danger d-none">You must capture your first name.</div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 col-sm-6 mb-2 text-center text-sm-start">
+                            <label for="txtPassword" class="form-label text-dark">
+                                Password
+                                <i class="fas fa-info-circle text-muted" 
+                                    data-bs-toggle="popover" data-bs-trigger="hover focus" 
+                                    data-bs-content="Enter your super secret password."></i>
+                            </label>
+                            
+                            <input type="password" class="form-control" id="txtPassword" aria-describedby="Password" placeholder="**********">
+                            <div id="passwordHelp" class="form-text text-danger d-none">You must capture your secret password.</div>
+                        </div>
+                        <div class="col-12 col-sm-6 mb-2 text-center text-sm-start">
+                            <label for="txtConfirmPassword" class="form-label text-dark">
+                                Confirm Password
+                                <i class="fas fa-info-circle text-muted" 
+                                    data-bs-toggle="popover" data-bs-trigger="hover focus" 
+                                    data-bs-content="Confirm your super secret password."></i>
+                            </label>
+                            
+                            <input type="password" class="form-control" id="txtConfirmPassword" aria-describedby="Confirm password" placeholder="**********">
+                            <div id="confirmPasswordHelp" class="form-text text-danger d-none">The passwords do not match.</div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 col-sm-3 text-center text-md-start mt-2">
+                            <button type="button" class="btn btn-success text-white w-100">Sign Up</button>
+                        </div>
+                        <div class="col-12 col-sm-9 text-start mt-2 px-3 px-sm-0 c-pointer d-flex align-items-end">
+                            Have an account?&nbsp;
+                            <a href="login.html" class="text-success btn-toggle-login">Login Now</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- ***************************** -->
+        </div>
+        <!-- ***************************** -->
     </div>
 
     <!-- Scripts -->
     <script src="js/lib/jquery-3.6.0.min.js"></script>
     <script src="js/lib/popper.min.js"></script>
-    <script src="js/lib/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/sidebar.js"></script>
-    <script src="js/header.js"></script>
+    <script src="lib/bootstrap-5.0.0-beta3/dist/js/bootstrap.bundle.js"></script>
     <script src="https://kit.fontawesome.com/5b10166cb2.js" crossorigin="anonymous"></script>
 </body>
 </html>

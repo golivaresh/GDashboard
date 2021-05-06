@@ -219,17 +219,24 @@ a {
 }
 /* ************************************************** */
 /* ************************************************** */
-// Login - SignUp
-.bg-login-page {
-  background-image: url(../img/login_wallpaper.jpg);
+.bg-page {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
-
-.bg-login-form {
-  background-color: rgb(239 239 239);
+// Login - SignUp
+.bg-login-page {
+  background-image: url(../img/login_wallpaper.jpg);
+  @extend .bg-page;
 }
+.bg-signup-page {
+  background-image: url(../img/login_wallpaper.jpg);
+  @extend .bg-page;
+}
+
+// .bg-login-form {
+//   background-color: rgb(239 239 239);
+// }
 /* ************************************************** */
 /* ************************************************** */
 // Error page
