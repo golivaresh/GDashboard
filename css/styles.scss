@@ -226,23 +226,19 @@ a {
 }
 // Login - SignUp
 .bg-login-page {
-  background-image: url(../img/login_wallpaper.jpg);
+  background-image: url(../img/bg/gol-bg-login.png);
   @extend .bg-page;
 }
 .bg-signup-page {
-  background-image: url(../img/login_wallpaper.jpg);
+  background-image: url(../img/bg/gol-bg-sign_up.png);
   @extend .bg-page;
 }
 
-// .bg-login-form {
-//   background-color: rgb(239 239 239);
-// }
 /* ************************************************** */
 /* ************************************************** */
 // Error page
 .glitch-container {
     letter-spacing: 8px;
-    // font-family: 'Press Start 2P';
     margin: 0;
     line-height: 0;
 }

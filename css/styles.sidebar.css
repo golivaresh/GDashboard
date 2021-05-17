@@ -253,11 +253,11 @@ a:active {
 }
 
 .bg-login-page {
-  background-image: url(../img/login_wallpaper.jpg);
+  background-image: url(../img/bg/gol-bg-login.png);
 }
 
 .bg-signup-page {
-  background-image: url(../img/login_wallpaper.jpg);
+  background-image: url(../img/bg/gol-bg-sign_up.png);
 }
 
 /* ************************************************** */

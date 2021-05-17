@@ -19,9 +19,6 @@ Header Root
 /* ************************************************** */
 /* Header */
 header.header {
-    // box-shadow: -1px 0px 5px 0px rgba(var(--bg-4-val), 75);
-    // -webkit-box-shadow: -1px 0px 5px 0px rgba(var(--bg-4-val), 75);
-    // -moz-box-shadow: -1px 0px 5px 0px rgba(var(--bg-4-val), 75);
     border-bottom: solid 1px var( --text-5 );
     max-height: 150px;
     z-index: 1;
@@ -93,7 +90,6 @@ div.bg-s-selector {
 }
 
 .icon-theme {
-    /* font-size: 1.2rem; */
     @extend .icon-border;
     border-radius: 50%;
     width: 1.5rem;

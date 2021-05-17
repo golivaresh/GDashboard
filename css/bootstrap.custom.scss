@@ -1,9 +1,9 @@
 /* ************************************************** */
 /* **************** Bootstrap Custom **************** */
 /* ************************************************** */
-@import "../lib/bootstrap-5.0.0-beta3/scss/functions";
-@import "../lib/bootstrap-5.0.0-beta3/scss/variables";
-@import "../lib/bootstrap-5.0.0-beta3/scss/mixins";
+@import "../lib/bootstrap-5.0.0-dist/scss/functions";
+@import "../lib/bootstrap-5.0.0-dist/scss/variables";
+@import "../lib/bootstrap-5.0.0-dist/scss/mixins";
 // Theming Bootstrap
 $theme-colors: (
     "primary":    $blue-500,
@@ -15,7 +15,7 @@ $theme-colors: (
     "light":      $light,
     "dark":       $dark
 );
-@import "../lib/bootstrap-5.0.0-beta3/scss/bootstrap.scss";
+@import "../lib/bootstrap-5.0.0-dist/scss/bootstrap.scss";
 /* ************************************************** */
 
 /* ************************************************** */
@@ -31,8 +31,6 @@ $theme-colors: (
 }
 .dropdown>.dropdown-menu.show {
     overflow: hidden;
-    // transform-origin: top center;
-    // transform: scale(1, 0);
 }
 .dropdown-header {
     color: var( --text-2 );
@@ -109,14 +107,6 @@ input[type="color"],
         color: var( --text-4 );
     }
 }
-
-// .form-control:active,
-// .form-control:focus,
-// .form-control:focus:active {
-//   background-color: #96d3ec!important;
-//   border-color: #96d3ec;
-//   color: white;
-// }
 /* ************************************************** */
 
 /* ************************************************** */
