@@ -317,6 +317,7 @@
     <script src="js/lib/jquery-3.6.0.min.js"></script>
     <script src="js/lib/popper.min.js"></script>
     <script src="lib/bootstrap-5.0.0-dist/js/bootstrap.bundle.js"></script>
+    <script src="js/theme.js"></script>
     <script src="js/main.min.js"></script>
     <!-- <script src="js/sidebar.js"></script> -->
     <!-- <script src="js/header.js"></script> -->
@@ -326,22 +327,16 @@
             /* *************************************************************************************************** */
             // Set variables.
             setComponents();
-            console.log('setComponents...');
             // Set Events.
             setEvents();
-            console.log('setEvents...');
             saveResizeElements();
-            console.log('saveResizeElements...');
             // Sets the theme saved in localstorage.
             setTheme( localStorage.getItem( 'g-theme' ) );
-            console.log('setTheme...');
             // Sets the backgorund saved in localstorage.
             changeSidebarBg( localStorage.getItem( 'sidebarImgUrl' ) );
-            console.log('changeSidebarBg...');
             // If at the beginning we are on a small screen, close the menu.
             if ( !isSmallScreen() ) {
                 toggleMenu();
-                console.log('toggleMenu...');
             }
             /* *************************************************************************************************** */
         });
