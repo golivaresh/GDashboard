@@ -53,6 +53,14 @@ Page Root
 /* ************************************************** */
 /* ************************************************** */
 /* Transitions */
+.tr-05 {
+  -webkit-transition: all 0.05s;
+  -moz-transition: all 0.05s;
+  -ms-transition: all 0.05s;
+  -o-transition: all 0.05s;
+  transition: all 0.05s;
+}
+
 .tr-1, nav#sidebar div#sidebarContainer div#sidebarOpc.m-opc-expanded div#sidebarAccordion .accordion-item div[id^=flushCollapse] {
   -webkit-transition: all 0.1s;
   -moz-transition: all 0.1s;
