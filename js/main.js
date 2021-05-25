@@ -19,13 +19,26 @@ let btnCloseActionSection;
 /* *************************************************************************************************** */
 /* ******************************************** Constants ******************************************** */
 /* *************************************************************************************************** */
-// Header
-const CSS_SIDEBAR_BG = {
-    'background': '',
-    'background-repeat': 'no-repeat',
-    'background-position': 'center',
-    'background-size': 'cover',
+const _CONF = {
+    sidebar: {
+        class_collapsed: 'm-collapsed',
+        class_expanded: 'm-expanded'
+    },
+    mainContainer: {
+        class_main_collapsed: 'm-main-collapsed',
+        class_main_expanded: 'm-main-expanded'
+    },
+    sidebarOpc: {
+        class_opc_collapsed: 'm-opc-collapsed',
+        class_opc_expanded: 'm-opc-expanded'
+    },
+    btnMenuToggle: {
+        class_btnMenu_collapsed: 'btn-menu-collapsed',
+        class_btnMenu_expanded: 'btn-menu-expanded'
+    }
 };
+const STR_MENU_STAT_LSTORAGE = 'm-status';
+const STR_MENU_STAT_DEFAULT = _CONF.sidebar.class_collapsed;
 /* *************************************************************************************************** */
 
 /* *************************************************************************************************** */
@@ -75,7 +88,7 @@ const setEvents = () => {
         () => { // Mouseenter event.
         }, () => { // Mouseleave event.
             // If the sidebar is not expanded, hide the accordion.
-            if ( !sidebar.hasClass('m-expanded') ) {
+            if ( !sidebar.hasClass( _CONF.sidebar.class_expanded ) ) {
                 hideAccordion();
             }
         }
@@ -101,27 +114,61 @@ const setEvents = () => {
 /* ****************************************** Configuration ****************************************** */
 /* *************************************************************************************************** */
 /**
+ * Initialize the sidebar.
+ * 
+ * @returns void.
+ */
+const initSidebar = () => {
+    // Validates if we're on small screen.
+    if ( !isSmallScreen() ) { // The current screen is not small.
+        const menuStatusLocal = localStorage.getItem( STR_MENU_STAT_LSTORAGE );
+        // Validate if the saved value is equal to the current class of the sidebar.
+        if ( menuStatusLocal && !sidebar.hasClass( menuStatusLocal ) ) {
+            // Toggle current class
+            toggleMenu();
+        }
+    } else if ( !sidebar.hasClass( _CONF.sidebar.class_collapsed ) ) {
+        // If we are on small screen and current class is not equal to the collapsed class.
+        toggleMenu();
+    }
+};
+/**
+ * Save the current state of the sidebar to local storage.
+ * 
+ * @returns void.
+ */
+const saveStatusMenu = () => {
+    const val = sidebar.hasClass( _CONF.sidebar.class_expanded ) 
+        ? _CONF.sidebar.class_expanded : _CONF.sidebar.class_collapsed;
+    localStorage.setItem( STR_MENU_STAT_LSTORAGE, val );
+};
+
+/**
  * Toggle classes of menu.
  * 
  * @returns void.
  */
  const toggleMenu = () => {
     // Toggle manu classes.
-    sidebar.toggleClass( 'm-collapsed' );
-    sidebar.toggleClass( 'm-expanded' );
-    mainContainer.toggleClass('m-main-collapsed');
-    mainContainer.toggleClass('m-main-expanded');
-    sidebarOpc.toggleClass( 'm-opc-collapsed' );
-    sidebarOpc.toggleClass( 'm-opc-expanded' );
-    btnMenuToggle.toggleClass( 'btn-menu-collapsed' );
-    btnMenuToggle.toggleClass( 'btn-menu-expanded' );
+    sidebar.toggleClass( _CONF.sidebar.class_collapsed );
+    sidebar.toggleClass( _CONF.sidebar.class_expanded );
+    mainContainer.toggleClass( _CONF.mainContainer.class_main_collapsed );
+    mainContainer.toggleClass( _CONF.mainContainer.class_main_expanded );
+    sidebarOpc.toggleClass( _CONF.sidebarOpc.class_opc_collapsed );
+    sidebarOpc.toggleClass( _CONF.sidebarOpc.class_opc_expanded );
+    btnMenuToggle.toggleClass( _CONF.btnMenuToggle.class_btnMenu_collapsed );
+    btnMenuToggle.toggleClass( _CONF.btnMenuToggle.class_btnMenu_expanded );
     
-    if ( !sidebar.hasClass('m-expanded') ) {
+    if ( !sidebar.hasClass(_CONF.sidebar.class_expanded) ) {
         // If menu is not expanded, hide the accordion.
         hideAccordion();
     } else {
         // If menu is expanded, expande the active accordion option.
         expandedIfActive();
+    }
+
+    if ( !isSmallScreen() ) {
+        saveStatusMenu();
     }
 };
 /**

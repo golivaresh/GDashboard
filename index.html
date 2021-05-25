@@ -318,7 +318,7 @@
     <script src="js/lib/popper.min.js"></script>
     <script src="lib/bootstrap-5.0.0-dist/js/bootstrap.bundle.js"></script>
     <script src="js/theme.js"></script>
-    <script src="js/main.min.js"></script>
+    <script src="js/main.js"></script>
     <!-- <script src="js/sidebar.js"></script> -->
     <!-- <script src="js/header.js"></script> -->
     <script src="https://kit.fontawesome.com/5b10166cb2.js" crossorigin="anonymous"></script>
@@ -331,13 +331,11 @@
             setEvents();
             saveResizeElements();
             // Sets the theme saved in localstorage.
-            setTheme( localStorage.getItem( 'g-theme' ) );
+            setTheme( localStorage.getItem( _STR_THEME_ID_LSTORAGE ) );
             // Sets the backgorund saved in localstorage.
-            changeSidebarBg( localStorage.getItem( 'sidebarImgUrl' ) );
+            changeSidebarBg( localStorage.getItem( _STR_BG_ID_LSTORAGE ) );
             // If at the beginning we are on a small screen, close the menu.
-            if ( !isSmallScreen() ) {
-                toggleMenu();
-            }
+            initSidebar();
             /* *************************************************************************************************** */
         });
     </script>
