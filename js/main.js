@@ -234,7 +234,7 @@ const saveRootVariable = ( varName, value ) => {
 /**
  * Open/close "action section".
  * 
- * @param {string} inputId id of the element tto show
+ * @param {string} inputId id of the element to show
  * @returns void.
  */
  const toggleActionSection = ( inputId ) => {
@@ -245,6 +245,7 @@ const saveRootVariable = ( varName, value ) => {
     if ( input && input.hasClass('inactive') ) { // if the input is inactive.
         // Remove "inactive" class.
         input.toggleClass('inactive');
+        input.find('input').first().focus();
     } else {
         // Close the "action section".
         actionSectionElements.addClass('inactive');
