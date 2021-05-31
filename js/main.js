@@ -10,6 +10,7 @@ let sidebarFooter;
 let sidebarOpc;
 let sidebarAccordionOpc;
 let sidebarAccordionFlush;
+let sidebarBg;
 // Header
 let actionSection;
 let actionSectionElements;
@@ -59,6 +60,7 @@ const setComponents = () => {
     sidebarProfileOpc = $( '#sidebar>#sidebarContainer>#sidebarOpc>#profileItems>ul>li' );
     sidebarAccordionOpc = $( '#sidebarAccordion>div.accordion-item>[class^="accordion-collapse"]>ul>li' );
     sidebarAccordionFlush = $('#sidebarAccordion>div.accordion-item>div[id^="flushCollapse"].collapse');
+    sidebarBg = $('#sidebarBg');
     // Header
     actionSection = $('#actionSection');
     btnCloseActionSection = $('#btnCloseActionSection');
@@ -191,6 +193,20 @@ const saveStatusMenu = () => {
  */
 const hideAccordion = () => {
     sidebarAccordionFlush.collapse('hide');
+};
+
+/**
+ * Change de background sidebar.
+ * 
+ * @param {string} img Background image to be set on the sidebar. If parameter "img" is null, it sets "no-image-bg.jpg" by default.
+ * @returns void.
+ */
+ const changeSidebarBg = ( img ) => {
+    img = img || _STR_BG_DEFAULT_IMG;
+    // Save current backgound.
+    localStorage.setItem( _STR_BG_ID_LSTORAGE, img );
+    _CSS_SIDEBAR_BG.background = `url(${ img })`;
+    sidebarBg.css(_CSS_SIDEBAR_BG);
 };
 /* *************************************************************************************************** */
 
